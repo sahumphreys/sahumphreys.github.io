@@ -3,4 +3,11 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+permalink: /
 ---
+
+# Home page
+
+Nothing to see here.
+
+[About](/about/)
