@@ -1,0 +1,38 @@
+
+
+$hue: 250;
+
+@function complementary($hue) {
+    @return $hue + 180;
+}
+
+@function rightAnalogous($hue) {
+    @return $hue + 30;
+}
+
+@function leftAnalogous($hue) {
+    @return $hue - 30;
+}
+
+$hueRightAnalogous: rightAnalogous($hue);
+$hueLeftAnalogous: leftAnalogous($hue);
+$hueComplement: complementary($hue);
+
+$primary-color: hsl($hue 60% 40%);
+$secondary-color: hsl($hueComplement 75% 60%);
+//$accent-color: hsl($hueRightAnalogous 50% 50%);
+
+$accentColor: hsl($hueRightAnalogous 60% 40%);
+$accentColorLight900: hsl($hueRightAnalogous 40% 95%);
+$accentColor2: hsl($hueLeftAnalogous 80% 80%);
+$accentColor2Light900: hsl($hueLeftAnalogous 40% 90%);
+
+$primaryDark500: hsl($hue 20% 50%);
+$primaryDark600: hsl($hue 20% 60%);
+$secondaryLight500: hsl($hueComplement 5% 50%);
+$secondaryLight900: hsl($hueComplement 5% 90%);
+
+$white: hsl($hue 100% 99%);
+$black: hsl($hue 10% 10%);
+
+$page-color: $white;

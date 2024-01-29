@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
 
-<body>
+<body class="container">
     <nav>
         <ul class="nav-links">
             <li><a href="/" {% if page.title=="Home" %}class="active-page" {% endif %}>Home</a></li>
@@ -21,7 +21,7 @@
         {{ content }}
     </main>
     <footer>
-        Proudly made with Jekyll
+        SAH
     </footer>
 </body>
 

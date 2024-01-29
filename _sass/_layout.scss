@@ -1,0 +1,81 @@
+/*
+_layout.css
+-------------------------------------------------------------------------------
+Classes etc for defining the layout of the main page
+NB.  Purely for layout and not styling of those elements
+-------------------------------------------------------------------------------
+*/
+
+.container {
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "header"
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    // grid-gap: 10px;
+    height: 100vh;
+}
+
+
+header {
+    // > * {
+        grid-area: header;
+    // }
+    // border: 1px solid #999;
+    //padding: 1rem;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: content;
+    border: 1px solid #999;
+}
+
+.sidebar-left {
+    grid-area: sidebar-left;
+    border: 1px solid #999;
+    margin-left: 1rem;
+}
+
+.sidebar-right {
+    grid-area: sidebar-right;
+    border: 1px solid #999;
+    margin-right: 1rem;
+}
+
+footer {
+    grid-area: footer;
+    border: 1px solid #999;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "sidebar-left"
+      "content"
+      "sidebar-right"
+      "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto /* Header */
+      minmax(75px, auto) /* Nav */
+      1fr /* Content */
+      minmax(75px, auto) /* Sidebar */
+      auto; /* Footer */
+  }
+
+  nav, aside {
+    margin: 0;
+  }
+}
+

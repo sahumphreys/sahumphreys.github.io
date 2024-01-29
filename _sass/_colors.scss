@@ -1,0 +1,66 @@
+/*
+ * colors.scss
+ * -------------------------------------------------------------------------
+ * Determines the color scheme from a given hue value
+ * -------------------------------------------------------------------------
+ */
+
+$hue: 200;
+
+@function complementary($hue) {
+  @return ($hue + 180) % 360;
+}
+
+@function rightAnalogous($hue) {
+  @return $hue + 30;
+}
+
+@function leftAnalogous($hue) {
+  @return $hue - 30;
+}
+
+$hueRightAnalogous: rightAnalogous($hue);
+$hueLeftAnalogous: leftAnalogous($hue);
+$hueComplement: complementary($hue);
+
+// base colors
+
+$primary-color-10: hsl($hue, 100%, 10%);
+$primary-color-15: hsl($hue, 100%, 15%);
+$primary-color-20: hsl($hue, 100%, 20%);
+$primary-color-25: hsl($hue, 100%, 25%);
+$primary-color-30: hsl($hue, 100%, 30%);
+$primary-color-35: hsl($hue, 100%, 35%);
+$primary-color-90: hsl($hue, 100%, 90%);
+
+// complementary colors
+$secondary-color-10: hsl($hueComplement, 100%, 10%);
+$secondary-color-15: hsl($hueComplement, 100%, 15%);
+$secondary-color-20: hsl($hueComplement, 100%, 20%);
+$secondary-color-25: hsl($hueComplement, 100%, 25%);
+$secondary-color-30: hsl($hueComplement, 100%, 30%);
+$secondary-color-35: hsl($hueComplement, 100%, 35%);
+$secondary-color-70: hsl($hueComplement, 100%, 70%);
+$secondary-color-90: hsl($hueComplement, 100%, 90%);
+
+// accent colors
+$accent-color-1-10: hsl($hueRightAnalogous, 100%, 10%);
+$accent-color-1-15: hsl($hueRightAnalogous, 100%, 15%);
+$accent-color-1-20: hsl($hueRightAnalogous, 100%, 20%);
+$accent-color-1-25: hsl($hueRightAnalogous, 100%, 25%);
+$accent-color-1-30: hsl($hueRightAnalogous, 100%, 30%);
+$accent-color-1-35: hsl($hueRightAnalogous, 100%, 35%);
+$accent-color-1-70: hsl($hueRightAnalogous, 100%, 70%);
+$accent-color-1-90: hsl($hueRightAnalogous, 100%, 90%);
+
+
+$accent-color-2-10: hsl($hueLeftAnalogous, 100%, 10%);
+$accent-color-2-15: hsl($hueLeftAnalogous, 100%, 15%);
+$accent-color-2-20: hsl($hueLeftAnalogous, 100%, 20%);
+$accent-color-2-25: hsl($hueLeftAnalogous, 100%, 25%);
+$accent-color-2-30: hsl($hueLeftAnalogous, 100%, 30%);
+$accent-color-2-35: hsl($hueLeftAnalogous, 100%, 35%);
+$accent-color-2-70: hsl($hueLeftAnalogous, 100%, 70%);
+$accent-color-2-90: hsl($hueLeftAnalogous, 100%, 90%);
+
+$white: hsl($hue, 100%, 99%);
