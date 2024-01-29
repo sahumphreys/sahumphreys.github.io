@@ -3,6 +3,6 @@ SAH GitHub Pages
 
 Parent folder for github pages
 
-Try: [CS](sahumphreys.github.io/cs/)
+Try: [sahumphreys.github.io/cs/](https://github.com/sahumphreys/sahumphreys.github.io)
 
 Check: [https://www.aleksandrhovhannisyan.com/blog/getting-started-with-jekyll-and-github-pages/]
