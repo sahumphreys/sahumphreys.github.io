@@ -8,10 +8,23 @@ body {
     font-size: 18px;
     font-family: Arial;
     // background: $secondary-color-15;
+    // background: $white;
+    // background: $accent-color-2-10;
     background: $white;
-    // background: $accent-color-2-10;;
 }
 
 h1 {
     color: $primary-color-35;
+}
+
+h2 {
+    color: $secondary-color-35;
+}
+
+h3 {
+    color: $accent-color-1-35;
+}
+
+h4 {
+    color: $accent-color-2-35;
 }

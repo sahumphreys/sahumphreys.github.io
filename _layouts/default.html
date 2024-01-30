@@ -8,21 +8,43 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
 
-<body class="container">
-    <nav>
-        <ul class="nav-links">
-            <li><a href="/" {% if page.title=="Home" %}class="active-page" {% endif %}>Home</a></li>
-            <li><a href="/about" {% if page.title=="About" %}class="active-page" {% endif %}>About</a></li>
-            <li><a href="/blog" {% if page.title=="Blog" %}class="active-page" {% endif %}>Blog</a></li>
-            <li><a href="/contact" {% if page.title=="Contact" %}class="active-page" {% endif %}>Contact</a></li>
-        </ul>
-    </nav>
-    <main class="page-content">
-        {{ content }}
-    </main>
-    <footer>
-        SAH
-    </footer>
+<body>
+    <div class="container">
+
+        <header class="main-head">
+            <p>HEADER</p>
+        </header>
+
+        <nav class="main-nav">
+            <p>NAVIGATION</p>
+            {% for page in site.pages %}
+            {% if page.title %}
+            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </nav>
+        <!-- <header class="main-head">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    
+                    {% for page in site.pages %}
+                    {% if page.title %}
+                    <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+        </header>
+
+
+        <main class="content">
+            {{ content }}
+        </main>
+
+        <footer class="main-footer">
+            SAH
+        </footer> -->
+    </div>
 </body>
 
 </html>
