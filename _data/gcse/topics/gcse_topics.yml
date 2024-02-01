@@ -1,0 +1,56 @@
+topics_list_title: GCSE Topics
+topics:
+
+- name: Systems Architecture
+  link: /gcse/Systems/
+  description: "Here is the description, including memory and storage but it might stray on to 3 lines?"
+  sequence: 1
+  image: /assets/img/cpu.png
+
+- name: Data Representation
+  link: /gcse/DataRepresentation/
+  description: "Here is the description which needs to be on 2 lines"
+  sequence: 2
+  image: /assets/img/binary.jpg
+
+- name: Computer networks
+  link: /gcse/networking/
+  description: "Here is the description, including , connections and protocols"
+  sequence: 3
+  image: /assets/img/networks.webp
+
+- name: Network security
+  link: /gcse/security/
+  description: "Here is the description and , system software"
+  sequence: 4
+  image: /assets/img/security.jpg
+
+- name: Impact of technology
+  link: /gcse/impact/
+  description: "Here is the description"
+  sequence: 5
+  image: /assets/img/impact.jpg
+
+- name: Algorithms
+  link: /gcse/algorithms/
+  description: "Here is the description"
+  sequence: 6
+  image: /assets/img/algorithms.jpg
+
+- name: Programming
+  link: /gcse/programming/
+  description: "Here is the description"
+  sequence: 7
+  image: /assets/img/programming.jpg
+
+- name: Logic and languages
+  link: /gcse/logic/
+  description: "Here is the description"
+  sequence: 8
+  image: /assets/img/logic.png
+
+- name: Programming with Python
+  link: /gcse/python/
+  description: "Sequenced tutorial on learning how to program with Python.  Including quiz questions and programming challenges"
+  sequence: 0
+  image: /assets/img/python_logo.png
