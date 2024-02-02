@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang={{ site.locale }}>
+{% include head.html %}
+
+
+<body>
+    <div class="container">
+
+        {% include top_navigation.html %}
+
+        <header>
+            <div class="hero">
+                <div class="hero-content">
+                    <p id="hero-logo" class="fa-solid fa-laptop-file"></p>
+                    <h1 class="logo">{{ site.title }}</h1>
+                    <p>{{ site.description }}</p>
+                </div>
+            </div>
+        </header>
+
+
+
+
+        <main class="content">
+            {{ content }}
+
+            <div class="card-box">
+                {% for card in site.data.home_cards %}
+
+                <div class="card">
+                    <img src="{{card.image}}" alt="Lago di Braies">
+
+                    <!-- A div with card__details class to hold the details in the card  -->
+                    <div class="card__details">
+
+                        <!-- A div with name class for the name of the card -->
+                        <div class="name">{{ card.heading}}</div>
+
+                        <p>{{ card.description }}</p>
+
+                        <!-- <button>Read more</button> -->
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </main>
+
+        {% include footer.html %}
+    </div>
+</body>
+
+</html>

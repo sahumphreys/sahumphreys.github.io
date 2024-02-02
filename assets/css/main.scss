@@ -16,8 +16,11 @@
 // @import 'components/tooltip';
 // @import 'general/highlight';
 // @import 'components/footer';
-@import 'normalise';
-@import 'colors';
+// @import 'normalise';
+// @import 'colors';
+@import 'variables';
+@import 'reset';
 @import 'layout';
 @import 'grid_areas';
+@import 'syntax';
 @import 'general';

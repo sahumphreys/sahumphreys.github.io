@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+
+<body>
+    <div class="container">
+
+        {% include top_navigation.html %}
+
+        <header>
+            <div class="hero">
+                <div class="hero-content">
+                    <p id="hero-logo" class="fa-solid fa-laptop-file"></p>
+                    <h1 class="logo">{{ site.title }}</h1>
+                    <p>{{ site.description }}</p>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="content">
+            {{ content }}
+            <h2>{{ site.data.gcse.topics.gcse_topics.topics_list_title }}</h2>
+            {% assign topics = site.data.gcse.topics.gcse_topics.topics %}
+
+            <div class="card-box">
+                {% for topic in topics %}
+                <div class="card">
+                    <img src = {{ topic.image }} />
+                    <div class="card-details">
+                        <div class="name"> {{ topic.name }}</div>
+                        <p>{{ topic.description }}</p>
+                        
+                    </div>
+                    <div class="button-container">
+                        <a href="{{ topic.link }}"><button>Read more</button></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- <div class="card-box">
+                {% for card in site.data.home_cards %}
+
+                <div class="card">
+                    <img src="{{card.image}}">
+
+                    <div class="card__details">
+                        <div class="name">{{ card.heading}}</div>
+                        <p>{{ card.description }}</p>
+                        <button>Read more</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div> -->
+        </main>
+
+        {% include footer.html %}
+    </div>
+</body>
+
+</html>

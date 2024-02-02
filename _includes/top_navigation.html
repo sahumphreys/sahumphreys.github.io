@@ -1,0 +1,21 @@
+<nav class="nav-bar">
+    <div class="logo-holder logo">
+        <a href="/">
+            <!-- <li class="fa-solid fa-laptop-file"></li> -->
+            Computer Science
+        </a>
+    </div>
+    <ul class="nav-list">
+        {% assign navigation_items = site.pages %}
+        {% for item in navigation_items %}
+        {% if item.top_nav %}
+        <li class="nav-item">
+            <a {% if item.url==page.url %}class="active" {% endif %} href="{{ item.url | prepend: site.baseurl }}">
+                {{ item.title }}
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+</nav>
