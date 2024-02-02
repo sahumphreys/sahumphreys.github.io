@@ -12,6 +12,14 @@ h4 {
 }
 
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: Lato, sans-serif;
+}
+
+
 h1 {
     color: $primary-color-25;
 }
@@ -191,9 +199,9 @@ button {
     &:before {
         content: "Note";
         width: 100%;
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
         font-weight: 600;
-        border-bottom: 2px solid $primary-color-35;      
+        border-bottom: 2px solid $primary-color-35;
     }
 }
 
@@ -206,9 +214,9 @@ button {
     &:before {
         content: "Note";
         width: 100%;
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
         font-weight: 600;
-        border-bottom: 2px solid $primary-color-35;      
+        border-bottom: 2px solid $primary-color-35;
     }
 }
 
@@ -230,4 +238,27 @@ button {
         content: "In this section ...";
         font-size: 2rem;
     }
+}
+
+.section-contents {
+
+    font-size: 12pt;
+
+    li {
+        color: $primary-color-25;
+    }
+
+    a {
+        color: $primary-color-25;
+    }
+}
+
+// .section-contents li {
+//     // color: white;
+//     color: red;
+
+// }
+
+.section-item {
+    // font-family: Lota;
 }

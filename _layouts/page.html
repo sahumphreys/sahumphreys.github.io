@@ -36,7 +36,8 @@
 
             <div class="right-sidebar">
                 <b>On this page ...</b>
-                {% include toc.html html=content h_max=3 class="section-contents" item-class="section-content-item" %}
+                <!-- {% include toc.html content=page.content skip_toc=page.skip_toc %} -->
+                {% include toc.html html=content h_max=3 class="section-contents" item_class="section-item" %}
             </div>
 
         </main>
