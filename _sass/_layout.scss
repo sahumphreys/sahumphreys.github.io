@@ -6,81 +6,60 @@ NB.  Purely for layout and not styling of those elements
 -------------------------------------------------------------------------------
 */
 
+@import url('https://fonts.googleapis.com/css?family=Bangers|Cinzel:400,700,900|Lato:100,300,400,700,900|Lobster|Lora:400,700|Mansalva|Muli:200,300,400,600,700,800,900|Open+Sans:300,400,600,700,800|Oswald:200,300,400,500,600,700|Roboto:100,300,400,500,700,900&display=swap');
+
 .container {
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-  column-gap: 10px;
-  // grid-template-areas:
-  //   "nav"
-  //   "header"
-  //   "content"
-  //   "footer";
-  // grid-template-columns: 1fr;
-  // grid-template-rows: auto auto 1fr auto;
-  // // grid-gap: 10px;
-  // height: 100vh;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
 }
 
 .container>* {
   grid-column: col-start / span 12;
 }
 
-.main-head {
-  grid-column: 1 / span 12;
+
+/* TOP NAVIGATION BAR */
+nav {
+  grid-column: col-start / span 12;
 }
 
-.main-nav {
-  grid-column: 1 / span 12;
+header {
+  grid-column: col-start / span 12;
 }
 
-@media (min-width: 500px) {
-  .side {
-    grid-column: col-start / span 3;
-    grid-row: 3;
-  }
+footer {
+  grid-column: col-start /span 12;
+  // margin-top: 10px;
+}
 
-  .ad {
-    grid-column: col-start / span 3;
-    grid-row: 4;
-  }
+main {
+  padding: 2rem;
+}
 
-  .content,
-  .main-footer {
-    grid-column: col-start 4 / span 9;
-  }
+.content {
+  grid-column: 2 / 12;
+}
 
-  nav ul {
-    display: flex;
-    justify-content: space-between;
+/*-- HERO UNIT --*/
+.hero {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+
+  h1 {
+      font-size: 3rem;
+      font-family: 'Lato';
+      // text-transform: lowercase;
+      font-weight: 300;
+      color: $white;
   }
 }
 
-@media (min-width: 700px) {
-  .main-nav {
-    grid-column: col-start / span 12;
-    // grid-row: 2 / 4;
-  }
-
-  .content {
-    grid-column: col-start 3 / span 8;
-    grid-row: 2 / 4;
-  }
-
-  .side {
-    grid-column: col-start 11 / span 2;
-    grid-row: 2;
-  }
-
-  .ad {
-    grid-column: col-start 11 / span 2;
-    grid-row: 3;
-  }
-
-  .main-footer {
-    grid-column: col-start / span 12;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
+#hero-logo {
+  font-size: 8rem;
 }

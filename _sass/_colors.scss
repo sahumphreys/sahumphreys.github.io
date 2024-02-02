@@ -5,7 +5,7 @@
  * -------------------------------------------------------------------------
  */
 
-$hue: 220;
+$hue: 200;
 $saturation: 80%;
 
 @function complementary($hue) {
@@ -66,3 +66,4 @@ $accent-color-2-70: hsl($hueLeftAnalogous, $saturation, 70%);
 $accent-color-2-90: hsl($hueLeftAnalogous, $saturation, 90%);
 
 $white: hsl($hue, $saturation, 99%);
+$black: hsl($hue, $saturation, 10%);

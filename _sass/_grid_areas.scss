@@ -9,22 +9,109 @@
 /* CONTAINER */
 /* -------------------------------------------------------------------------- */
 .container {
-    background: red;
-    margin: 20px;
+    width: 100%;
+    width: 1wh;
 }
 
 /* -------------------------------------------------------------------------- */
 /* HEADER main-head */
 /* -------------------------------------------------------------------------- */
-.main-head {
+header {
     background: $primary-color-35;
     color: $white;
-    padding: 1rem;
 }
 
 /* -------------------------------------------------------------------------- */
 /* NAVIGATION main-nav */
 /* -------------------------------------------------------------------------- */
-.main-nav {
-    background: $secondary-color-35;
+
+nav {
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+.nav-bar {
+    display: flex;
+    background: $black;
+    justify-content: space-between;
+    align-items: middle;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item a {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: $accent-color-2-35;
+    font-size: 1.1rem;
+}
+
+.nav-item a:hover {
+    color: $white;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: auto;
+    background: $black;
+
+    p {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 0.8rem;
+        color: $accent-color-2-35;
+    }
+}
+
+/* PAGE Content - for 3 column layout as standard for the topic content */
+.page-content {
+    display: flex;
+    width: 100%;
+    // border: 1px solid red;
+    gap: 1rem;
+
+    p,
+    ul {
+        margin: 1rem 0 1rem 0;
+    }
+
+}
+
+.left-sidebar {
+    flex: 1;
+    // border: 1px solid green;
+
+    ol {
+        margin: 0;
+        list-style-type: decimal;
+    }
+
+    li,
+    a {
+        color: $primary-color-10;
+    }
+
+    a:hover {
+        color: $primary-color-35;
+        // background: $primary-color-90;
+    }
+}
+
+.main-content {
+    flex: 4;
+    // border: 1px solid black;
+    overflow: hidden;
+}
+
+.right-sidebar {
+    flex: 1;
+    // border: 1px solid blue;
 }

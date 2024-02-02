@@ -1,49 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-</head>
+{% include head.html %}
 
 <body>
     <div class="container">
 
-        <header class="main-head">
-            <p>HEADER</p>
+        {% include top_navigation.html %}
+
+        <header>
+            <div class="page-head">
+                <p>{{ page.title | upcase }}</p>
+            </div>
         </header>
 
-        <nav class="main-nav">
-            <p>NAVIGATION</p>
-            {% for page in site.pages %}
-            {% if page.title %}
-            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-            {% endif %}
-            {% endfor %}
-        </nav>
-        <!-- <header class="main-head">
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    
-                    {% for page in site.pages %}
-                    {% if page.title %}
-                    <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
-            </nav>
-        </header>
+
 
 
         <main class="content">
             {{ content }}
         </main>
 
-        <footer class="main-footer">
-            SAH
-        </footer> -->
+        {% include footer.html %}
     </div>
 </body>
 
