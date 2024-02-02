@@ -19,47 +19,62 @@ NB.  Purely for layout and not styling of those elements
   grid-column: col-start / span 12;
 }
 
-
-/* TOP NAVIGATION BAR */
-nav {
-  grid-column: col-start / span 12;
+.main-head {
+  grid-column: 1 / span 12;
 }
 
-header {
-  grid-column: col-start / span 12;
+.main-nav {
+  grid-column: 1 / span 12;
 }
 
-footer {
-  grid-column: col-start /span 12;
-  // margin-top: 10px;
-}
+@media (min-width: 500px) {
+  .side {
+    grid-column: col-start / span 3;
+    grid-row: 3;
+  }
 
-main {
-  padding: 2rem;
-}
+  .ad {
+    grid-column: col-start / span 3;
+    grid-row: 4;
+  }
 
-.content {
-  grid-column: 2 / 12;
-}
+  .content,
+  .main-footer {
+    grid-column: col-start 4 / span 9;
+  }
 
-/*-- HERO UNIT --*/
-.hero {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 300px;
-
-  h1 {
-      font-size: 3rem;
-      font-family: 'Lato';
-      // text-transform: lowercase;
-      font-weight: 300;
-      color: $white;
+  nav ul {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
-#hero-logo {
-  font-size: 8rem;
+@media (min-width: 700px) {
+  .main-nav {
+    grid-column: col-start / span 12;
+    // grid-row: 2 / 4;
+  }
+
+  .content {
+    grid-column: col-start 3 / span 8;
+    grid-row: 2 / 4;
+  }
+
+  .side {
+    grid-column: col-start 11 / span 2;
+    grid-row: 2;
+  }
+
+  .ad {
+    grid-column: col-start 11 / span 2;
+    grid-row: 3;
+  }
+
+  .main-footer {
+    grid-column: col-start / span 12;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
 }
