@@ -6,7 +6,7 @@
  */
 
 $hue: 200;
-$saturation: 80%;
+$saturation: 60%;
 
 @function complementary($hue) {
   @return ($hue + 180) % 360;

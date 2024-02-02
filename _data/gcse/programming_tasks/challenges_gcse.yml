@@ -1,0 +1,205 @@
+info: _A series of tasks to help practice some of the concepts covered in this section. There is a help page associated with each and some sample code.  Try the tasks before peeking!_
+
+tasks:
+- topic: Getting started with Python
+  challenges:
+    - task_title: Area of a rectangle
+      task_outline: Write Python code to calculate and print the area of a rectangle. You can define the length and width of the rectangle as variables and then calculate the area using the formula `area = length * width`.
+      link: tasks/area_of_a_rectangle
+
+    - task_title: Greeting  
+      task_outline: Create a Python program that asks the user for their name and then prints a greeting message using that name. For example, if the user enters “Alice,” the program should print “Hello, Alice!”
+      link: tasks/greeting
+
+
+- topic: Variables
+  challenges:
+    - task_title: Total Marks 
+      task_outline: A student has taken three tests as part of his final year exam. He scored 65/100, 45/100 and 57/100 respectively. Write a Python program to sum his total marks and display to the screen. Save the file as marks.py.
+      link: tasks/total_marks
+    
+    - task_title: Total Marks - Extended 
+      task_outline: As an extension to the marks.py program, ask the user to enter the three marks. Output the total and the overall mark as an average of the three.
+      link: tasks/total_marks_extended
+    
+    - task_title: Petrol Sales 
+      task_outline: Your local garage sells petrol at the following rates Diesel £1.64 Unleaded £1.59 Unleaded65 £1.61. Each price needs to be increased by 10% and stored again. What would sensible variables names be for this program? Write a program to display the initial prices, then calculate and store the increased prices and display to the screen. Save your file as petrol.py.
+      link: tasks/petrol_sales
+
+- topic: Operators
+  challenges:
+    - task_title: Exponentiation
+      task_outline: Write Python code to calculate the result of 2^5 (2 raised to the power of 5) using the exponentiation operator.
+      link: exponentiation
+
+    # - task_title: Area of a rectangle
+    #   task_outline: Create a Python program that calculates the area of a rectangle with a length of 8 units and a width of 4 units using the multiplication operator.
+    #   link: area_of_a_rectangle
+
+    - task_title: Integer division
+      task_outline: Implement a Python program that calculates the quotient and remainder when dividing 23 by 5 without using the / operator. Use the integer division operator // and the modulo operator %.
+      link: integer_division
+
+- topic: Strings
+  challenges:
+    - task_title: Greeting a friend
+      task_outline: Write a Python program that asks the user to enter their first name and last name separately. Then, print a formatted message like "Hello, [First Name] [Last Name]!" using f-strings.  Replacing `[First Name]` and `[Last Name]` with the data entered by the user.
+      link: greeting_a_friend
+
+    - task_title: Paragraph
+      task_outline: Create a string variable `paragraph` that contains a multiline text with at least three lines. Use triple quotes to define the multiline string. Print the contents of the `paragraph` variable.
+      link: paragraph
+
+    - task_title: Word Count
+      task_outline: Write a Python program that takes a user's input as a sentence and counts the number of words in that sentence. Words are separated by spaces. Print the word count. (For this exercise look up the `split()` method.)
+      link: word_count
+
+- topic: Functions
+  challenges:
+    - task_title: Area of a triangle
+      task_outline: Write a Python function called calculate_triangle_area(base, height) that calculates and returns the area of a triangle using the formula area = 0.5 * base * height. Then, call this function from your main program and print the result.
+      link: area_of_a_triangle
+
+    - task_title: Greeting function
+      task_outline: Create a Python function called greet(name, message="Hello") that takes a name and an optional message (defaulting to "Hello") and prints a greeting message, such as "Hello John" or "Hi Jane." Call this function with different arguments to demonstrate its functionality.
+      link: greeting_function
+
+    - task_title: Area of a circle
+      task_outline:  Define a Python function called calculate_circle_area(radius) that calculates and returns the area of a circle using the formula area = π * radius^2. You can assume the value of π is 3.14. Call this function from your main program, input a radius value from the user, and print the calculated area.
+      link: area_of_a_circle
+
+- topic: Built in functions
+  challenges:
+    - task_title: Area of a circle
+      task_outline: Create a Python program that calculates the area of a circle. Prompt the user to enter the radius using the input() function, convert it to a float, and then calculate the area using the appropriate mathematical formula.
+      link: area_of_a_circle
+
+    - task_title: Sum and product
+      task_outline: Write a Python program that takes two numbers as input from the user and calculates their sum and product. Use the input() function to receive user input, convert it to integers using int().
+      link: sum_and_product
+
+- topic: Selection
+  challenges:
+    - task_title: Grade Calculator
+      task_outline: Write a Python program that takes a test score as input and prints the corresponding letter grade ('A', 'B', 'C', 'D', or 'F') based on the following grading scale A  90 or above, B  80-89, C 70-79, D 60-69, F Below 60
+      link: grade_calculator
+
+    - task_title: Leap Year Checker
+      task_outline: Write a Python program that checks if a given year is a leap year. A leap year is divisible by 4 but not divisible by 100 unless it is divisible by 400. Print "Leap year" or "Not a leap year" accordingly.
+      link: leap_year_checker
+
+    - task_title: Rock, Paper, Scissors
+      task_outline: Write a Python program that lets a user play the game of Rock, Paper, Scissors against the computer. Implement the game logic and provide instructions for the user to input their choice.
+      link: rock_paper_scissors
+
+- topic: Iteration
+  challenges:
+    - task_title: Multiplication Table
+      task_outline: Write a Python program that uses a `for` loop to generate and print the multiplication table for a given number (e.g., 5).
+      link: multiplication_table
+
+    - task_title: Factorial Calculator
+      task_outline: Write a Python program that uses a for loop to calculate and print the factorial of a given number (e.g., 5! = 5 x 4 x 3 x 2 x 1).
+      link: factorial_calculator
+
+    - task_title: Number Guessing Game
+      task_outline: Write a Python program that generates a random number between 1 and 100 and asks the user to guess it using a `while` loop. Provide hints (higher or lower) and count the number of guesses until the user guesses correctly.
+      link: number_guessing_game
+
+- topic: Turtle Programming
+  challenges:
+    - task_title: Basic shapes
+      task_outline: Create a program that uses the turtle library to draw basic shapes such as squares, triangles, and circles. Use loops for repetitive actions and functions to modularize code.
+      link: basic_shapes
+
+    - task_title: Combining shapes
+      task_outline: Combine those shapes to draw a picture of say a house with a door, windows, roof, walls etc.
+      link: combining_shapes
+
+    - task_title: Spiral
+      task_outline: Create a colorful spiral pattern using the turtle library. Experiment with changing colors, angles, and distances to create an interesting visual effect. 
+      link: spiral
+
+    - task_title: Race Game
+      task_outline: Create a race program.  Two turtles move across the screen to an end point.  Each moves a random distance   each time so either one could be the winner of the race.
+      link: race_game
+
+- topic: Lists
+  challenges:
+    - task_title: Shopping List
+      task_outline: Write a Python program that allows a user to create and manage a shopping list. Implement features to add, remove, and display items in the list.
+      link: shopping_list
+
+    - task_title: Gradebook
+      task_outline: Write a Python program that keeps track of student grades. Implement a list to store student names and another list to store their corresponding grades. Allow the user to add and remove students and their grades, and calculate the average grade.
+      link: gradebook
+
+    - task_title: To-Do List
+      task_outline: Write a Python program that simulates a to-do list. Allow the user to add, remove, and display tasks in the list. Include an option to mark tasks as completed.
+      link: to_do_list
+
+- topic: 2D Lists
+  challenges:
+    - task_title: Matrix Addition
+      task_outline: Write a Python program that adds two 2D matrices. Allow the user to input the dimensions and elements of the matrices and display the result.
+      link: matrix_addition
+
+    - task_title: Transpose a Matrix
+      task_outline: Write a Python program that calculates and displays the transpose of a given 2D matrix. The transpose of a matrix swaps its rows and columns.
+      link: transpose_a_matrix
+
+    - task_title: Matrix Multiplication
+      task_outline: Write a Python program that multiplies two matrices and displays the result. Allow the user to input the dimensions and elements of the matrices.
+      link: matrix_multiplication
+
+- topic: Dictionaries
+  challenges:
+    - task_title: Names and grades
+      task_outline: Write a Python function that takes a dictionary of student names and their corresponding grades and returns the names of all students who received an "A" grade.
+      link: names_and_grades
+
+    - task_title: English to French
+      task_outline: Create a Python program that simulates a simple English-to-French dictionary. Allow the user to input an English word, and your program should return the French translation if it exists in the dictionary.
+      link: english_to_french
+
+    - task_title: Book titles
+      task_outline: Write a Python function that takes a list of dictionaries, where each dictionary represents a book with attributes like title, author, pages, and year. The function should return a list of book titles published in a specific year provided as an argument to the function.
+      link: book_titles
+
+- topic: Tuples
+  challenges:
+    - task_title: Tuple Slicing
+      task_outline: Write a Python program that takes a string as input and converts it into a tuple of individual characters. Then, display a slice of the tuple containing the characters from the 2nd to the 5th position.
+      link: tuple_slicing
+
+    - task_title: Email Splitter
+      task_outline: Write a Python program that prompts the user to enter an email address and then splits it into a tuple containing the username and domain. Display both parts separately.
+      link: email_splitter
+
+    - task_title: Temperature Records
+      task_outline: Create a program that stores daily temperature records as tuples. Allow the user to input the temperature for each day of a week (e.g., Monday to Sunday). Then, find and display the maximum and minimum temperatures for the week using tuple operations.
+      link: temperature_records
+
+- topic: Exceptions
+  challenges:
+    - task_title: Calculator with Error Handling
+      task_outline: Create a simple calculator program that takes two numbers and an operation (addition, subtraction, multiplication, division) from the user. Handle both ValueError and ZeroDivisionError exceptions
+      link: calculator_with_error_handling
+
+    - task_title: Data Validation
+      task_outline: Write a program that prompts the user to enter their age. Handle both ValueError and AgeError exceptions.  For the second of these create a custom exception "AgeError" and raise it if the age is less than 0 or greater than 150. Handle this exception and display an appropriate message.
+      link: data_validation
+
+- topic: Working with files
+  challenges:
+    - task_title: Word Counter
+      task_outline: Write a Python program that reads a text file and counts the number of words in it. Display the word count as output.
+      link: word_counter
+
+    - task_title: Binary Data Manipulation
+      task_outline: Write a Python program that reads a binary file containing integers and finds the sum of all the integers in the file.
+      link: binary_data_manipulation
+
+    - task_title: File Copy
+      task_outline: Write a Python program that copies the contents of one text file to another. The program should take two filenames as input and create a copy of the first file into the second file.
+      link: file_copy

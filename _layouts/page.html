@@ -10,7 +10,7 @@
 
         <header>
             <div class="page-head">
-                <p>{{ page.title | upcase }}</p>
+                <p>{{ page.categories[0] | capitalize }} - {{ page.title | upcase }}</p>
             </div>
         </header>
 
@@ -32,12 +32,39 @@
             <div class="main-content">
                 <h1>{{ page.title}}</h1>
                 {{ content }}
+
+                {% for challenge in site.data.gcse.programming_tasks.challenges_gcse.tasks %}
+                {% if challenge.topic == page.title %}
+                {% assign tasks_found = true %}
+
+                <section id="#programming-tasks-section" class="programming_tasks">
+                    <h2 id="programming-tasks-section">Programming Tasks</h2>
+                    {{ site.data.gcse.programming_tasks.challenges_gcse.info | markdownify }}
+                    <ol>
+                        {% for item in challenge.challenges %}
+                        <li><strong><a href="{{ site.gcse_task_path | append: item.link }}">{{ item.task_title
+                                    }}</a></strong>: {{ item.task_outline }}</li>
+                        {% endfor %}
+                    </ol>
+                </section>
+                {% endif %}
+                {% endfor %}
             </div>
 
             <div class="right-sidebar">
                 <b>On this page ...</b>
                 <!-- {% include toc.html content=page.content skip_toc=page.skip_toc %} -->
-                {% include toc.html html=content h_max=3 class="section-contents" item_class="section-item" %}
+                {% include toc.html html=content h_max=2 sanitize=true class="section-contents"
+                item_class="section-item" %}
+
+                {% if page.page > 1 %}
+                <hr />
+
+                <a href="#programming-tasks-section"><button>Programming Tasks</button></a>
+                <a href="task_list"><button>All Tasks</button></a>
+
+                <hr />
+                {% endif %}
             </div>
 
         </main>
