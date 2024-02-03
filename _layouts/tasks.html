@@ -2,5 +2,17 @@
 layout: default
 ---
 
+<h1> {{ page.title}}</h1>
 
 {{ content}}
+
+{% for topic in site.data.gcse.programming_tasks.challenges_gcse.tasks %}
+    <br />
+    <h2> {{ forloop.index }}. {{ topic.topic }}</h2>
+    <hr />
+
+    {% for challenge in topic.challenges %}
+        <h3><a href="{{ challenge.link }}">{{ challenge.task_title}}</a></h3>
+        <p>{{ challenge.task_outline | markdownify }}</p>
+    {% endfor %}
+{% endfor %}

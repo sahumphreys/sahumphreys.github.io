@@ -1,15 +1,10 @@
 ---
 title: All Programming Tasks
 layout: tasks
-# categories: [python]
-# page: 16
+categories: [python]
+page: 17
 ---
 
-# {{ page.title}}
-{% for topic in site.data.challenges_gcse %}
-## {{ forloop.index }}. {{ topic.topic }}
-{% for challenge in topic.challenges %}
-**[{{ challenge.task_title}}]({{ challenge.link }})** - {{ challenge.task_outline }}
-{% endfor %}
-{% endfor %}
+Getting practice with programming is really important.  Use these tasks to get more experience with the basic syntax and constructs of Python.  Click on the task title to get some hints and additional information about these tasks.
+
             

@@ -5,8 +5,8 @@
  * -------------------------------------------------------------------------
  */
 
-$hue: 200;
-$saturation: 80%;
+$hue: 210;
+$saturation: 50%;
 
 @function complementary($hue) {
   @return ($hue + 180) % 360;

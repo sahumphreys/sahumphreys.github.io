@@ -10,7 +10,7 @@
 
         <header>
             <div class="page-head">
-                <p>{{ page.title | upcase }}</p>
+                <p>{% if page.categories %}{{ page.categories[0] | capitalize }} - {% endif %} {{ page.title | upcase }}</p>
             </div>
         </header>
 
@@ -23,6 +23,7 @@
 
         {% include footer.html %}
     </div>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

@@ -21,7 +21,7 @@
 
         <main class="content">
             {{ content }}
-            <h2>{{ site.data.gcse.topics.gcse_topics.topics_list_title }}</h2>
+            <h1 class="center">{{ site.data.gcse.topics.gcse_topics.topics_list_title }}</h1>
             {% assign topics = site.data.gcse.topics.gcse_topics.topics %}
 
             <div class="card-box">
@@ -40,20 +40,6 @@
                 {% endfor %}
             </div>
             
-            <!-- <div class="card-box">
-                {% for card in site.data.home_cards %}
-
-                <div class="card">
-                    <img src="{{card.image}}">
-
-                    <div class="card__details">
-                        <div class="name">{{ card.heading}}</div>
-                        <p>{{ card.description }}</p>
-                        <button>Read more</button>
-                    </div>
-                </div>
-                {% endfor %}
-            </div> -->
         </main>
 
         {% include footer.html %}

@@ -9,9 +9,9 @@ top_nav: true
 
 It'd be nice to get a form on here as well, various possibilities are available for that.
 
----
 
-{% assign emailLink = site.author.links | where: "label", "Email" | first %}
+
+<!-- {% assign emailLink = site.author.links | where: "label", "Email" | first %}
 
 {% if emailLink %}
   <i class="{{ emailLink.icon }}"></i><a href="{{ emailLink.url}}"> {{ site.author.email }}</a>
@@ -21,5 +21,5 @@ It'd be nice to get a form on here as well, various possibilities are available 
 
 {% if ghLink %}
   <i class="{{ ghLink.icon }}"></i><a href="{{ ghLink.url}}"> {{ ghLink.label }}</a>
-{% endif %}
+{% endif %} -->
 
