@@ -4,7 +4,7 @@ tasks:
 - topic: Getting started with Python
   challenges:
     - task_title: Area of a rectangle
-      task_outline: Write Python code to calculate and print the area of a rectangle. You can define the length and width of the rectangle as variables and then calculate the area using the formula `area = length * width`..
+      task_outline: Write Python code to calculate and print the area of a rectangle. You can define the length and width of the rectangle as variables and then calculate the area using the formula `area = length * width`.
       link: tasks/area_of_a_rectangle
 
     - task_title: Greeting  
