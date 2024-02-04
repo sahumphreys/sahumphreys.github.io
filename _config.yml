@@ -63,9 +63,18 @@ collections:
   gcse:
     output: true
     permalink: /:collection/:path
-  # alevel:
+  alevel:
+    output: true
+    permalink: /:collection/:path
+  docs:
+    output: true
+    permalink: /:collection/:path
+  # specifications:
   #   output: true
-  #   permalink: /alevel/:path
+  #   permalink: /docs/:collection/:path
+  # past_papers:
+  #   output: true
+  #   permalink: /:collection/:path
 
 # -- MARKDOWN --
 #markdown: kramdown

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+<h2>{{ site.data.documents.docs.specs_list_title}}</h2>
+
+{% assign specifications = site.data.documents.docs.specifications  %}
+
+{% for doc in specifications %}
+    <details>
+        <summary>
+            <b class="detail-heading">{{ doc.level }}</b>
+        </summary>
+        {% for entry in doc.spec %}
+        <ul>
+            <li><a href="{{entry.link}}" target="_blank">{{entry.board}}</a></li>
+        </ul>
+        {% endfor %}
+    </details>
+{% endfor %}
+
+<h2>{{ site.data.documents.docs.past_papers_list_title }}</h2>
+
+{% assign past-papers = site.data.documents.docs.past_papers %}
+{% for doc in past-papers %}
+    <details>
+        <summary><b class="detail-heading">{{ doc.level }}</b></summary>
+        <ul>
+            {% for board in doc.boards %}
+                <li>{{ board.name }}</li>
+                <ul>
+                {% assign papers = board.papers | sort: "year" | reverse %}
+                {% for paper in papers %}
+                    <li>{{ paper.year}}: Paper {{ paper.paper_number }}</li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
+    </details>
+{% endfor %}
+

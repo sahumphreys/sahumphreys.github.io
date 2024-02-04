@@ -2,7 +2,6 @@
 title: Contact
 permalink: /contact/
 layout: default
-top_nav: true
 ---
 
 # Contact

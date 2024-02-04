@@ -1,0 +1,62 @@
+# Data directory for downloadable documents
+# - Specifications
+# - Past papers
+# -------------------------------------------------------------------
+
+specs_list_title: Exam board specifications
+
+specifications:
+  - level: A Level
+    spec:
+      - board: AQA
+        link: /docs/AQA-7516-7517-SP-2015.pdf
+      
+      - board: OCR
+        link: /docs/OCR-A-Level.pdf
+  
+  - level: GCSE
+    spec:
+      - board: Pearson International
+        link: pearson-international-gcse-CS.pdf
+      
+      - board: OCR
+        link: /docs/OCR-CS-GCSE-2018.pdf
+      
+      - board: AQA
+        link: /docs/AQA-8525-SP-2020.pdf
+
+past_papers_list_title: Past Papers
+past_papers:
+  - level: A Level
+    boards:
+      - name: AQA
+        papers:
+          - year: 2022
+            paper_number: 1
+          - year: 2022
+            paper_number: 2
+
+      - name: OCR
+        papers:
+          - year: 2022
+            paper_number: 1
+          - year: 2022
+            paper_number: 2
+
+  - level: GCSE
+    boards:
+      - name: AQA
+        papers:
+          - year: 2022
+            paper_number: 1
+          - year: 2022
+            paper_number: 2
+          - year: 2023
+            paper_number: 1
+      - name: OCR
+        papers:
+          - year: 2018
+            paper_number: 1
+          - year: 2022
+            paper_number: 2
+

@@ -2,13 +2,13 @@ topics_list_title: GCSE Topics
 topics:
 
 - name: Systems Architecture
-  link: /gcse/Systems/
+  link: /gcse/system_architecture/
   description: "Here is the description, including memory and storage but it might stray on to 3 lines?"
   sequence: 1
   image: /assets/img/cpu.png
 
 - name: Data Representation
-  link: /gcse/DataRepresentation/
+  link: /gcse/data_representation/
   description: "Here is the description which needs to be on 2 lines"
   sequence: 2
   image: /assets/img/binary.jpg
@@ -26,7 +26,7 @@ topics:
   image: /assets/img/security.jpg
 
 - name: Impact of technology
-  link: /gcse/impact/
+  link: /gcse/impact_of_technology/
   description: "Here is the description"
   sequence: 5
   image: /assets/img/impact.jpg

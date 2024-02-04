@@ -2,7 +2,6 @@
 layout: default
 title: About
 permalink: /about/
-top_nav: true
 ---
 
 # About

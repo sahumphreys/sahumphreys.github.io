@@ -52,12 +52,12 @@
             </div>
 
             <div class="right-sidebar">
+                {% if page.page > 1 %}
                 <h4>On this page ...</h4>
                 <!-- {% include toc.html content=page.content skip_toc=page.skip_toc %} -->
                 {% include toc.html html=content h_max=2 sanitize=true class="section-contents"
                 item_class="section-item" %}
 
-                {% if page.page > 1 %}
                 <hr />
 
                 <a href="#programming-tasks-section"><button>Programming Tasks</button></a>
