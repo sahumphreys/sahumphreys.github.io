@@ -55,15 +55,17 @@
                 {% if page.page > 1 %}
                 <h4>On this page ...</h4>
                 <!-- {% include toc.html content=page.content skip_toc=page.skip_toc %} -->
-                {% include toc.html html=content h_max=2 sanitize=true class="section-contents"
+                {% include toc.html html=content h_max=3 sanitize=true class="section-contents"
                 item_class="section-item" %}
-
+                
+                {% if page.categories[0] == 'python' %}
                 <hr />
 
                 <a href="#programming-tasks-section"><button>Programming Tasks</button></a>
                 <a href="task_list"><button>All Tasks</button></a>
 
                 <hr />
+                {% endif %}
                 {% endif %}
             </div>
 
