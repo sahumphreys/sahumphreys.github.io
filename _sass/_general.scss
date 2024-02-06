@@ -49,6 +49,52 @@ hr {
     margin-bottom: 1rem;
 }
 
+img {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* TABLES */
+
+table {
+    table-layout: auto; //fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #e7e7e7;
+    border-spacing: 2px;
+    padding: 1rem;
+    caption-side: bottom;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    font-family: Lato;
+    font-size: 1.2rem;
+    background: $primary-color-35;
+    color: $white;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+table>tr {
+    vertical-align: middle;
+}
+
+td,
+th {
+    display: table-cell;
+    padding: 5px;
+    border: solid 1px $white;
+}
+
 
 .center {
     text-align: center;
