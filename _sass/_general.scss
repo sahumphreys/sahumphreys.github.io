@@ -9,15 +9,11 @@ h2,
 h3,
 h4 {
     font-family: Lato, sans-serif;
+    margin: 1.5rem 0 0.5rem 0;
 }
 
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: Lato, sans-serif;
-}
+
 
 
 h1 {
@@ -66,6 +62,7 @@ table {
     border-spacing: 2px;
     padding: 1rem;
     caption-side: bottom;
+    margin-bottom: 1rem;
 }
 
 thead {

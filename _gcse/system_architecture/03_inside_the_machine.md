@@ -6,8 +6,7 @@ categories: ['Systems Architecture']
 ---
 
 {: .callout.objectives }
->- First
->- Second
+>- To recognize and name key hardware components found inside a computer system, including the motherboard, CPU, graphics card, sound card, network card, secondary storage devices, and power supply unit.
 
 Inside all computers are a number of components that need to work together.  The way these are organised is known as the system architecture.  In this section we'll review the main components and then dig in a little deeper in subsequent sections in this topic.  
 
@@ -138,7 +137,83 @@ Key features and functions of a network card include:
 
 The Network card is usually integrated with the motherboard - this is the norm.  There may be reason to upgrade if improved performance or advanced security is required or if the onboard card malfunctions.
 
+## Secondary Storage
 
-e. **Bus:**
-   - A bus is a communication pathway that allows data to be transmitted between different components of the computer. It consists of a set of wires that carry signals, such as address and data, between the CPU, memory, and other peripheral devices.
+Secondary storage refers to **non-volatile**, persistent storage devices that hold data and files for the long term, even when the power is turned off. Unlike primary storage (RAM or main memory), which is volatile and temporary, secondary storage retains data for an extended period, making it suitable for long-term storage and retrieval. Secondary storage devices are essential for storing the operating system, applications, user files, and other data on a computer or electronic device.
+
+Secondary stage comes in different forms, including:
+
+- **Hard Disk Drives (HDDs):** HDDs use magnetic storage to store data on spinning disks with typical capacity of 1Tb and more.
+- **Solid-State Drives (SSDs):** SSDs use NAND-based flash memory to store data. They are faster than HDDs, have no moving parts, and are becoming increasingly popular for their speed and reliability.  More expensive than HDDs.
+- **Optical Drives:** Devices such as CD (Compact Disc), DVD (Digital Versatile Disc), and Blu-ray drives use optical storage to read and write data on optical discs. While becoming less common, they are still used for specific applications.
+
+Though not internal to a computer you will also find secondary storage devices such as:
+
+- **USB Flash Drives:** Portable and compact, USB flash drives use flash memory to store data. They are widely used for transporting and transferring files between computers.
+- **Memory Cards:** Commonly used in smartphones, and other portable devices, memory cards use flash memory to provide removable storage.
+
+Finally, for completeness, secondary storage can be centrally shared in a local and wide are network.  **Network Attached Storage (NAS)**provides shared storage accessible by multiple users and devices and **Cloud Storage:** services allow users to store and access data over the internet. Examples include services like Google Drive, Dropbox, and Microsoft OneDrive.
+
+![Storage devices](/assets/img/storage-devices.png)
+
+They each share the following characteristics, distinguishing them from primary storage (RAM):
+
+- **Non-Volatility:** Secondary storage retains data even when the power is turned off. This characteristic allows for the long-term storage of information, making it suitable for data that needs to persist across sessions.
+- **Large Capacity:** Secondary storage devices typically offer larger storage capacities compared to primary storage (RAM). This allows for the storage of operating systems, software applications, documents, multimedia files, and more.
+- **Slower Access Speeds:** Accessing data from secondary storage is generally slower than accessing data from primary storage. This is due to factors such as mechanical movement (in the case of hard disk drives) or the nature of the storage medium.
+
+## Power Supply Unit
+
+Clearly the primary function of the **Power Supply Unit (PSU)** is to provide power to the computer but it also plays several important roles in ensuring the stability, efficiency, and overall functionality of the entire computer system. 
+
+![Power Supply](/assets/img/power-supply.png)
+
+Here are some key aspects of the importance of the power supply e.g.
+
+- **Stability of Power Delivery:** Fluctuations or irregularities in power can lead to system instability, crashes, or damage to sensitive components. A reliable power supply helps maintain system stability.
+- **Protection Against Power Surges and Spikes:** To safeguard the computer system from sudden increases in voltage and prevent damage to internal components, such as the motherboard, CPU, and storage devices.
+- **Efficient Power Conversion:** Modern power supplies are designed to efficiently convert electrical power from the source (such as a wall outlet) into the required voltages for the various components in the computer. Higher efficiency means less wasted energy, reduced heat generation, and lower electricity bills.
+- **Regulation of Voltage and Current:** The power supply regulates the voltage and current supplied to different components, ensuring that they receive the appropriate levels of power. This regulation is essential for preventing damage to sensitive electronic components and ensuring proper operation.
+- **Compatibility with Components:** Power supplies come in various form factors and wattages. Selecting a power supply that is compatible with the components in the computer is crucial. Different components may have different power requirements, and the power supply must meet or exceed those requirements for optimal performance.
+- **Cooling and Fan Control:** The power supply unit often includes a cooling fan to dissipate heat generated during operation. Some power supplies offer fan speed control based on temperature, helping to maintain a balance between cooling efficiency and noise levels.
+
+## Heat Sink and Fan
+
+The computer will generate a lot of heat and the system needs to prevent overheating which can damage other components and degrade performance of the system.
+
+![Heat Sink](/assets/img/heat-sink.jpg)
+
+The **heat sink** absorbs and dissipates heat away from the CPU. It is typically made of a thermally conductive material such as aluminum or copper, which helps transfer heat away from the CPU to a larger surface area. The increased surface area allows for more efficient heat dissipation into the surrounding air.
+
+It is mounted directly on top of the CPU, making direct contact with the CPU's heat-producing surface. The design of the heat sink, including its fins or ridges, maximizes the surface area available for heat exchange.
+
+Some heat sinks are equipped with heat pipes—hollow tubes filled with a heat-conductive fluid. These pipes efficiently transport heat away from the CPU to the fins of the heat sink, enhancing the overall cooling performance.
+
+The **fan** works in conjunction with the heat sink. Its primary purpose is to enhance the heat dissipation process by increasing the airflow around the heat sink. It is usually mounted on top of or adjacent to the heat sink. As it spins, it draws air through the heat sink's fins, carrying away the heat and helping to maintain a lower temperature around the CPU.
+
+The fan speed is often controlled dynamically based on the CPU temperature. When the CPU is under heavy load and generates more heat, the fan speeds up to increase airflow and cooling. Conversely, when the CPU is under lighter loads, the fan may operate at a lower speed to reduce noise.
+
+## Questions
+
+1. Name three essential components you can find inside a computer when you take off the lid.
+   
+2. Explain the importance of understanding the hardware components of a computer, such as the motherboard and CPU. Why is it beneficial to know how these components interact?
+
+3. Describe the function of the CPU socket on the motherboard. Why is a secure connection between the CPU and the motherboard essential?
+
+4. What is the role of the Northbridge and Southbridge components in the chipset of a motherboard?
+
+5. Why is the clock speed of a CPU an important factor in determining its performance?
+
+6. What is the purpose of the ALU (Arithmetic Logic Unit) in a CPU?
+
+7. Explain the importance of the graphics card in a computer system. How does it contribute to gaming experiences?
+
+8. What are the key functions of a sound card in a computer system? Why might someone choose to use a dedicated sound card instead of onboard audio?
+
+9. Define the primary purpose of a network card. What role does it play in connecting a computer to a network?
+
+10. Compare and contrast HDDs and SSDs as forms of secondary storage. Highlight the advantages and disadvantages of each.
+
+
 
