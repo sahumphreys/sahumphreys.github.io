@@ -128,6 +128,57 @@ This can be described in pseudocode as:
 		power = power * 2
 ~~~
 
+## Binary Numbers and Python
+
+To convert character data to an integer we use the function `int()` as in:
+
+```python
+value = input("Enter a number: ")
+value_int = int(value)
+```
+
+The related functions `float()` and `str()` can also be used to convert one data type to another, the first converting a string to a floating point number, the second converting numeric data to a string.
+
+We can also use the function `bin()`.  This function takes an integer argument and returns its binary representation.
+
+```python
+value = int(input("Enter a number: "))		# e.g. 5
+value_bin = bin(value)	  			# convert to binary
+print(value_bin)				# => '101'
+```
+
+Running this in the Python interactive environment:
+
+```bash
+>>> value = int(input("Enter a number: "))
+Enter a number: 5
+>>> value_bin = bin(value)
+>>> print(value_bin)
+0b101
+```
+
+{: .callout.notice}
+> The output is prefixed with `0b` to indicate that the number is binary.
+
+A binary string can be converted to its integer form by adding an additional argument to the `int()` function:
+
+```python
+binary_num = '0101'
+decimal_num = int(binary_num, 2)
+print(decimal_num)
+```
+
+And the output is:
+
+```bash
+>>> value_dec = int(value_bin, 2)
+>>> print(value_dec)
+5
+```
+
+Converting to other number bases is also possible just by changing that second argument to show the base of the number of be converted e.g. `int('FF', 16)` will return $$255$$.
+
+
 ## Questions
 
 1. Convert the binary number $$1101_2$$ to decimal
