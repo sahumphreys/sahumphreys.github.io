@@ -15,31 +15,31 @@ From an electronic perspective a computer is built of lots (lots and lots) of tr
 Imagine if we had to count up to say $$5$$ but only had the digits $$0$$ and $$1$$ to work with:
 
 | Binary | Decimal |
-|:------:|:-------:|
+| :----: | :-----: |
 |   0    |    0    |
 |   1    |    1    |
-|  10    |    2    |
-|  11    |    3    |
-| 100    |    4    |
-| 101 | 5 |
+|   10   |    2    |
+|   11   |    3    |
+|  100   |    4    |
+|  101   |    5    |
 
 What is happening here?  How have we arrived at those binary numbers?  Pause for a moment and consider how we work with decimal, or denary, numbers which is our norm.  Take the number $$245$$.  We know this is $$2$$ lots of $$100$$ plus $$4$$ lots of $$10$$ plus $$5$$.
 
 Our decimal system is also know as **Base-10**.  It has **10** digits (0..9).  If we think of our number, $$245$$, as having three columns, each column will have, reading from right to left, place values that are powers of $$10$$:
 
-| Hundreds | Tens | Units|
-|:--------:|:------:|:------:|
-| $$10^2$$ | $$10^1$$| $$10^0$$|
-|     **2**    |    **4**    |   **5**  |
+| Hundreds |   Tens   |  Units   |
+| :------: | :------: | :------: |
+| $$10^2$$ | $$10^1$$ | $$10^0$$ |
+|  **2**   |  **4**   |  **5**   |
 
 Thousands would be $$10^3$$ and so on.
 
 So, the binary (or Base-2) number system has the following pattern, where each column represents an increasing power of $$2$$:
 
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|   128   |   64    |   32    |   16    |    8    |    4    |    2    |    1    |
+| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | $$2^7$$ | $$2^6$$ | $$2^5$$ | $$2^4$$ | $$2^3$$ | $$2^2$$ | $$2^1$$ | $$2^0$$ |
-|         |         |         |         |         |  **1**  |  **0**  | **1** |
+|         |         |         |         |         |  **1**  |  **0**  |  **1**  |
 
 We can see that $$101_2$$ is 1 lot of 4 plus 1.
 
@@ -57,27 +57,27 @@ There are two methods we can use to convert a decimal number to a binary number.
 - Repeat, this time putting a $$1$$ in the closest column, $$32$$ ($$2^{5}$$), and take that away from $$53$$ leaving $$21$$.  
 - Repeat, putting a $$1$$ in the next column, $$16$$ ($$2^{4}$$), and that away from $$21$$ leaving $$5$$  which can quickly be added in the remaining columns for $$2^{2}$$ and $$2^{0}$$.
 
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-| :---: | :--: | :--: | :--: | :-: | :-: | :-: | :-: |
+|   128   |   64    |   32    |   16    |    8    |    4    |    2    |    1    |
+| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | $$2^7$$ | $$2^6$$ | $$2^5$$ | $$2^4$$ | $$2^3$$ | $$2^2$$ | $$2^1$$ | $$2^0$$ |
-|  **1**  |  **1** |  **1** |  **1** | **0** | **1** | **0** | **1** |
+|  **1**  |  **1**  |  **1**  |  **1**  |  **0**  |  **1**  |  **0**  |  **1**  |
 
 If you had up the column headings where there is a $$1$$, ($$128 + 64 + 32 + 16 + 4 + 1$$) you will get the sum: $$245$$.
 
 **Method 2: Repeated division by 2**
 
-Take the decimal number and repeatedly divide by $2$ writing down the remainder and stop when zero is reached:
+Take the decimal number and repeatedly divide by $$2$$ writing down the remainder and stop when zero is reached:
 
 | Quotient | New Number | Remainder |
-| :--------: | :----------: | :---------: |
-|  245/2   |    122     |    **1**      |
-|  122/2   |     61     |    **0**      |
-|   61/2   |     30     |    **1**      |
-|   30/2   |     15     |    **0**      |
-|   15/2   |      7     |    **1**      |
-|    7/2   |      3     |    **1**      |
-|    3/2   |      1     |    **1**      |
-|    1/2   |      0     |    **1**      |
+| :------: | :--------: | :-------: |
+|  245/2   |    122     |   **1**   |
+|  122/2   |     61     |   **0**   |
+|   61/2   |     30     |   **1**   |
+|   30/2   |     15     |   **0**   |
+|   15/2   |     7      |   **1**   |
+|   7/2    |     3      |   **1**   |
+|   3/2    |     1      |   **1**   |
+|   1/2    |     0      |   **1**   |
 
 Then read up from the bottom!
 

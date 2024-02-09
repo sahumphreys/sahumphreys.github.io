@@ -47,11 +47,37 @@ For example, adding the binary number $$01101110_2$$ and $$00011100_2$$.  Work t
 {: .callout.notice}
 > To check you have the right answer, convert the result (and original numbers) into decimal
 
+## Overflow Error
+
+An **overflow error** occurs when the result of a calculation requires more bits than are in the available range.
+
+For example, when using eight bits, the largest number that can be represented is $$11111111_2$$ (that is $$255_{10}$$). If we wanted to add $$2$$ to $$254$$ the following would occur:
+
+```plain
+1 1 1 1 1 1 1 0 +
+0 0 0 0 0 0 1 0 
+---------------
+0 0 0 0 0 0 0 0
+```
+
+we know the actual result should be $$100000000_2$$ (that is $$256_{10}$$) but that requires nine bits and we only have 8.  An **overflow error** has occurred.  When this happens it can have serious consequences for the validity of calculations.
+
 ## Multiplication and Division
+
+Binary numbers can be multiplied and divided by shifting the bits to the left or the right respectively.
 
 {: .callout.notice}
 >- The **Most Significant Bit** is the bit on the left side of the binary number and, if changed, has the greatest impact on the magnitude of that number; 
 >- the **Least Significant Bit** is the bit on the right side of the binary number ans, if changed, has the least impact on the magnitude of that number.
+
+**Multiplication**
+
+To multiply a number, a binary shift moves all the digits in the binary number along to the left and fills the gaps after the shift with 0:
+
+- to multiply by two, all digits shift one place to the left
+- to multiply by four, all digits shift two places to the left
+- to multiply by eight, all digits shift three places to the left
+- etc..
 
 Observe the following binary numbers and their decimal equivalents:
 
@@ -60,6 +86,40 @@ $$00001010_2 = 10_{10}$$
 $$00010100_2 = 20_{10}$$  
 
 Notice how the binary pattern $$101$$ is being shifted to the left by one place, this is multiplying that number by $$2$$.  Shifting it $$4$$ places to the left multiplies it by $$4$$.
+
+By applying a combination of shifting by a power of two and addition we can multiply any binary number.
+
+**Division**
+
+To divide a binary number shift in the other direction, to the right, and fill the gaps before the shift with $$0$$.  You should be able to see how this works by taking the previous example but not starting with $$20$$:
+
+$$00010100_2 = 20_{10}$$ 
+$$00001010_2 = 10_{10}$$  
+$$00000101_2 = 5_{10}$$    
+
+{: .callout.notice}
+> To subtract one binary number the computer will add the **complement** of the second number, that is we add the negative.  we'll see how to do this later.
+
+## Errors met when shifting
+
+Consider the following example of shifting bits to the right:
+
+Starting with $$11_{10}$$:  
+
+$$00001011_2 = 11_{10}$$  
+
+We shift the bits one place to the right, resulting in the value $$5$$:
+
+$$00000101_2 = 5_{10}$$
+
+The least significant bit has been lost, it's fallen off the end, thus the answer we're expecting of dividing by $$2$$ has been **rounded down**.
+
+Consider too this situation when shifting to the left, and assuming we *only* have 8 bits to work with:
+
+$$10100000_2 = 160_{10}$$  
+$$01000000_2 = 64_{10}$$
+
+Here, the most significant bit has been lost.  Instead of multiplying by $$2$$ we have been left with a wrong answer as we only have 8 bits to hold our result.  A further example of an **overflow error**.
 
 ## Python shift operators
 
