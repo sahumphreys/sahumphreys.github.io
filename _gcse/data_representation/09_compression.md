@@ -131,22 +131,22 @@ An example will help.  Let's see how to encode the word "BEETROOT" using this te
 **1. Create the frequency table**
 
 | Character | Frequency |
-|:---------:|:---------:|
-| B | 1 |
-| E | 2 |
-| T | 2 |
-| R | 1 |
-| O | 2 |
+| :-------: | :-------: |
+|     B     |     1     |
+|     E     |     2     |
+|     T     |     2     |
+|     R     |     1     |
+|     O     |     2     |
 
 The next step is to assign a binary code to each letter.  Naively we might try the following:
 
-| Character | Code |
-|:---------:|:---------:|
-| B | 1 |
-| E | 01 |
-| T | 11 |
-| R | 100 |
-| O | 101 |
+| Character | Code  |
+| :-------: | :---: |
+|     B     |   1   |
+|     E     |  01   |
+|     T     |  11   |
+|     R     |  100  |
+|     O     |  101  |
 
 The problem with this occurs when these are put together to form a longer bit pattern as it creates ambiguity, for example:
 
@@ -159,12 +159,12 @@ Therefore we need to get clever, and this is where the Huffman algorithm comes i
 Reorder the frequency table with the least occurring characters at the top, we need to start with these.
 
 | Character | Frequency |
-|:---------:|:---------:|
-| B | 1 |
-| R | 1 |
-| E | 2 |
-| T | 2 |
-| O | 2 |
+| :-------: | :-------: |
+|     B     |     1     |
+|     R     |     1     |
+|     E     |     2     |
+|     T     |     2     |
+|     O     |     2     |
 
 **3. Build a binary tree**
 
@@ -209,6 +209,53 @@ To read the encoding for each of the characters start with the root node and fol
 The final encoding for 'BEETROOT' would therefore be: 0011 000 000 1 0010 01 01 1 (spaces inserted to aid readability).  The original 8-character string would take 8 bytes (64 bits), our new encoded version takes 20 bits.
 
 The table of encodings would also be required so space is needed for this.  For this single word we'd not save a great deal but for larger text, whole books, the saving would be beneficial using this technique.
+
+## Lossless Compression with Python
+
+Here we'll look at how we can implement a simple Run Length Encoding (RLE) algorithm using Python and a full program for implementing Huffman encoding.
+
+### Run Length Encoding
+
+Consider first the steps needed for a function that will take as an argument the string to be compressed::
+
+```plain
+Initialise an empty string to store the compressed result
+Iterate through the input string
+    Initialize a count for consecutive characters
+    Get the current character
+    While there are consecutive characters:
+        Increase count
+        Move to the next character
+    Append the character and the count to the output string
+    Move to the next character
+return the compressed string
+```
+
+This can be implemented as:
+
+```python
+def Compress(str):
+    result = ""
+    i = 0
+    
+    while i < len(str):
+        count = 1
+        ch = str[i]
+        while i + 1 < len(str) and str[i] == str[i + 1]:
+            count += 1
+            i += 1
+        result += f"{ch}{count} "
+        i += 1
+    return result
+```
+
+Use this function in a program that asks for a phrase from the user and then returns the compressed form.
+
+See: [rle.py](/assets/code/run-length-encoding/rle.py)
+        
+### Huffman encoding       
+
+To implement the Huffman encoding algorithm reuires structures and concepts for Python that are outside the scope of the GCSE so a full program is provided for download to try:  [Huffman Encoding](/assets/code/huffman/huffman.py).
 
 ## Questions
 
