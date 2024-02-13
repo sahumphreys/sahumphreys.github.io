@@ -51,6 +51,15 @@ img {
     margin: 0 auto;
 }
 
+blockquote {
+    border-left: 8px solid #666;
+    border-radius: $border-radius;
+    padding: 2rem;
+}
+
+blockquote:before {
+    
+}
 
 /* TABLES */
 
