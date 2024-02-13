@@ -4,6 +4,8 @@ layout: page
 categories: ['Data Representation']
 ---
 
+![](/assets/img/binary.jpg)
+
 This is a big unit with many sections but reduces to the fact that computers are digital machines and all the data they process have to be converted from their original form, characters, sound, images etc., into a digital representation i.e. **binary**.  It's fundamental to our understanding of how computers work.
 
 This section covers the following topics:

@@ -4,6 +4,8 @@ layout: page
 categories: ['Systems Architecture']
 ---
 
+![](/assets/img/cpu.png)
+
 This module provides a straightforward exploration of the foundational concepts in computing. We'll begin by defining key terms such as **hardware**, **software**, and **computer systems**. From there, we'll delve into **system software** and **application software**, understanding the roles of **operating system**s and **utility software**.
 
 Moving on to **programming languages**, we'll clarify what they are and differentiate between **low-level** and **high-level** languages. The discussion will touch upon **machine code** and **assembly language** as low-level languages, and we'll explore the functions of programming translators like **assemblers**, **compilers**, and **interpreters**.

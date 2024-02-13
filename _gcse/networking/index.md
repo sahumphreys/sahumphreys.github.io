@@ -4,6 +4,8 @@ layout: page
 categories: [Networking]
 ---
 
+![Networking](/assets/img/networks.webp)
+
 It's hard to imagine our world without networked devices today, so much are business, social and leisure activity takes place on the network via the Internet as we access websites for information, social media applications to keep up with friends and other news and even control devices such as the heating and lighting in our own homes.  The past 30-40 years has been the network revolution.  In this section we take the lid off networking and examine how it works.
 
 Topics will include:
