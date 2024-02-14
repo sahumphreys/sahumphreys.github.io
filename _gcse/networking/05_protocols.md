@@ -94,14 +94,14 @@ The application layer defines how the user application processes, (i.e. programs
 
 Just a few of these protocols that exist in this layer are:
 
-| Application Type |  Application-layer protocol |Transport Protocol|
-| ---------------- | --------------------------- |------------------|
-| Electronic Mail| Send: Simple Mail Transfer Protocol **SMTP** (RFC821)|TCP 25|
-| | Receive: Post Office Protocol v3 **POP3** (RFC1939) |TCP 110|
-|World Wide Web | Hypertext Transfer Protocol 1.1 **HTTP** (RFC2068)|TCP 80|
-|File Transfer| File Transfer Protocol **FTP** (RFC959) |TCP 21|
-|Remote File Server| Network File System **NFS** |UDP or TCP|
-| etc .. |||
+| Application Type   | Application-layer protocol                            | Transport Protocol |
+| ------------------ | ----------------------------------------------------- | ------------------ |
+| Electronic Mail    | Send: Simple Mail Transfer Protocol **SMTP** (RFC821) | TCP 25             |
+|                    | Receive: Post Office Protocol v3 **POP3** (RFC1939)   | TCP 110            |
+| World Wide Web     | Hypertext Transfer Protocol 1.1 **HTTP** (RFC2068)    | TCP 80             |
+| File Transfer      | File Transfer Protocol **FTP** (RFC959)               | TCP 21             |
+| Remote File Server | Network File System **NFS**                           | UDP or TCP         |
+| etc ..             |                                                       |                    |
 
 We'll look in more detail at some of these later.
 
@@ -210,3 +210,26 @@ Throughout this unit the terms __client__ and __server__ have been used a great 
 Typically, servers will be identified by the type of service they provide e.g. Web server serving web pages, Email servers serving email messages, DHCP server providing a DHCP service etc..  The server will be running all the time and can respond to requests from multiple clients at the same time.
 
 It's a good example of abstraction in that the client does not need to know how the server is performing its task, it only needs to know the format of the response so it can process it appropriately.  The server and the client are separate independent programs. Each can be developed independently of the other, code on the client side can be changed without affecting the operation of the server and vice versa.  So, one can change the user interface and/or internal processing of the data but when it comes to needing to pass messages between the client and the server though they need to ensure the messages are in the form both can recognise.
+
+
+## Questions
+
+1. Define the term "network protocol" and provide an example.
+   
+2. Explain the purpose of TCP (Transmission Control Protocol) and UDP (User Datagram Protocol). Highlight the main differences between them.
+
+3. Describe the 4-layer TCP/IP model and explain the functions of each layer.
+
+4. Identify three application layer protocols and provide a brief explanation of each.
+
+5. What are the responsibilities of the transport layer in the TCP/IP model? Differentiate between TCP and UDP.
+
+6. Explain the role of the Internet layer in the TCP/IP model. List three protocols operating at this layer and briefly describe their functions.
+
+7. What is the purpose of the link layer in networking? How does it handle MAC addressing and data transmission?
+
+8. Discuss the significance of the port in the transport layer. Why is it necessary, and how does it contribute to effective data communication?
+
+9. Choose one application layer protocol (e.g., HTTP, FTP) and explain how it functions in detail, including the role of the client and server.
+
+10. What is the client-server model? Provide an example of how it is utilized in networking, and explain the roles of both the client and the server.
