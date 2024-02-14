@@ -22,7 +22,7 @@
         <main class="content">
             {{ content }}
             <h1 class="center">{{ site.data.gcse.topics.gcse_topics.topics_list_title }}</h1>
-            {% assign topics = site.data.gcse.topics.gcse_topics.topics %}
+            {% assign topics = site.data.gcse.topics.gcse_topics.topics  | sort: "sequence" %}
 
             <div class="card-box">
                 {% for topic in topics %}

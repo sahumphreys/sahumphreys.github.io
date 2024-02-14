@@ -1,6 +1,12 @@
 topics_list_title: GCSE Topics
 topics:
 
+- name: Programming with Python
+  link: /gcse/python/
+  description: "Sequenced tutorial on learning how to program with Python.  Including quiz questions and programming challenges"
+  sequence: 0
+  image: /assets/img/python_logo.png
+
 - name: Systems Architecture
   link: /gcse/system_architecture/
   description: "Here is the description, including memory and storage but it might stray on to 3 lines?"
@@ -25,11 +31,12 @@ topics:
   sequence: 4
   image: /assets/img/security.jpg
 
-- name: Impact of technology
-  link: /gcse/impact_of_technology/
-  description: "Here is the description"
-  sequence: 5
-  image: /assets/img/impact.jpg
+- name: Relational Databases
+  link: /gcse/databases/
+  description: Relational databases and SQL
+  sequence: 9
+  image: /assets/img/databases.png
+
 
 - name: Algorithms
   link: /gcse/algorithms/
@@ -49,8 +56,9 @@ topics:
   sequence: 8
   image: /assets/img/logic.png
 
-- name: Programming with Python
-  link: /gcse/python/
-  description: "Sequenced tutorial on learning how to program with Python.  Including quiz questions and programming challenges"
-  sequence: 0
-  image: /assets/img/python_logo.png
+- name: Impact of technology
+  link: /gcse/impact_of_technology/
+  description: "Here is the description"
+  sequence: 5
+  image: /assets/img/impact.jpg
+
