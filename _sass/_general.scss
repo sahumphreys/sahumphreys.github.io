@@ -52,14 +52,15 @@ img {
 }
 
 blockquote {
-    border-left: 8px solid #666;
+    border-left: 8px solid $secondary-color-20;
     border-radius: $border-radius;
-    padding: 2rem;
+    padding: 0.5rem;
+    background: $secondary-color-70;
+    font-style: italic;
+    font-size: 1rem;
 }
 
-blockquote:before {
-    
-}
+blockquote:before {}
 
 /* TABLES */
 
