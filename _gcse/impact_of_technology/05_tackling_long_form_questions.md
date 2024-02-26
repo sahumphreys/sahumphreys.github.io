@@ -7,6 +7,7 @@ categories: [Impact]
 {: .callout.objectives}
 >- First
 
+<!--
 Think of extended response questions as mini essays
 Must be in prose form
 Need to make use of appropriate keywords
@@ -39,3 +40,4 @@ There could be a cultural impact if new technology replaces traditions, causes p
 How would the implementation of the technology be affected by legislation such as the Data Protection Act, Copyrights Designs and Patents Act or Computer Misuse Act - e.g. would they need to get clearance for images, sounds, etc. Some fields, e.g. financial services, even have their own rules that could override these - e.g. banks are required to keep records for longer than the Data Protection Act suggests.
 Could the technology used disadvantage or discrimate against a particular group? This can be anything from devices being inaccessible to people with disabilities (e.g. visual impairment, colourblindness), creating a "digital divide" by being unaffordable for people on lower incomes, or requiring expensive accessories or services. Some technologies aren't intentionally discrimatory, but might cause problems because of an oversight or lack of training with appropriate examples, e.g. facial recognition software that doesn't work properly with some ethnic groups.
 Are there democratic implications? For example, social media allows people to publish their opinions, which was previously only possible if you were in a position of power or worked at a newspaper. Authoritarian regimes might struggle to suppress "the truth" if people start tweeting about it, but on the other hand some governments (e.g. ours) believe that encrypted communication can be a threat to democracy due to its use by criminals and terrorists.
+-->
