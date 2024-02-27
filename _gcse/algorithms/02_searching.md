@@ -68,29 +68,85 @@ while i < item_count and found == False:
 
 As soon as we find the search key in our list the loop will terminate.  Our best case will not be when the item we're looking for is the first item in the list.  The worst case remains, it will be when the search key is the last item in the list (or not in the list).
 
-With such a small number of items this change will make little difference but as the number of items in our list increases, and increases, it will being to have a significant impact on how quickly our algorithm will return a result.
+With such a small number of items this change will make little difference but as the number of items in our list increases, and increases, it will being to have a significant impact on how quickly ouralgorithm will return a result.  Mathematically, computer scientists use something called BigO notation to describe the efficiency of an algorithm.  BigO notation is **not** part of the GCSE syllabus but we would describe the linear search as O(n) where `n` is the number of items.  As `n` grows so does the time taken for this algorithm to complete (in the worst case).
 
 The study of algorithms is about finding the **best** algorithm for the given situation.
 
-{: callout.notice}
+{: .callout.notice}
 > It would be even better to put this algorithm into its own function passing in the search key and the item list as parameters to this function.
 >  
-Use Case: Linear search is suitable for unordered lists or small datasets where the order of elements is not important.
+
+If there is a small dataset, and the items in that dataset are not ordered then a linear search will be fine.  However, for large datasets it will very quickly begins to slow down and there is a better alternative, the **binary search**.
 
 ## Binary Search
 
-Overview: Binary search is a more efficient searching algorithm that requires the list to be sorted. It works by repeatedly dividing the search interval in half until the target element is found.
-Process:
-Start with the entire sorted list.
-Compare the target element with the middle element of the list.
-If the target is equal to the middle element, the search is successful.
-If the target is less than the middle element, repeat the search on the lower half of the list.
-If the target is greater than the middle element, repeat the search on the upper half of the list.
-Continue dividing the search interval until the target is found or the interval becomes empty.
-Use Case: Binary search is highly efficient for large, sorted datasets. However, the list must be sorted for binary search to work correctly.
-Comparison:
+The **binary search** is a more efficient searching algorithm that requires the list to be sorted. Remember that point, it's a common examination question, the items in the dataset must be sorted.
 
-Efficiency: Binary search is generally more efficient than linear search for large datasets, especially when the data is sorted. Linear search may require checking every element in the worst case.
-Requirement: Binary search requires the list to be sorted, while linear search works on both sorted and unsorted lists.
-Implementation: Binary search involves a more complex implementation compared to the simplicity of linear search.
-Understanding these searching algorithms is important for GCSE Computer Science students as they lay the foundation for more advanced algorithms and data structures. Students should be able to analyze scenarios and choose the appropriate algorithm based on the characteristics of the data they are working with.
+It works by repeatedly dividing the list of items in half until the target element is found.  Think of the children's game of "Guess The Number".  It starts with one player thinking of a number between say 1 and 100.  We could approach this linearly i.e. "Is it 1?", "Is it 2?", "Is it 3?" etc..  Or we could ask "Is it higher than 50?"  If the answer is "yes" then we can automatically discount all the values between 1 and 50 thus chopping the orignal list in half. 
+
+In outline, the binary search works as follows:
+
+- Start with the entire sorted list.
+- Compare the target element with the middle element of the list.
+- If the target is equal to the middle element, the search is successful.
+- If the target is less than the middle element, repeat the search on the lower half of the list.
+- If the target is greater than the middle element, repeat the search on the upper half of the list.
+- Continue dividing the search interval until the target is found or the interval becomes empty.
+
+A binary search is generally more efficient than linear search for large datasets, especially when the data is sorted. Linear search may require checking every element in the worst case.
+
+It's a more complicated algorithm to implement:
+
+```python
+def binary_search(items, target):
+    low = 0
+    high = len(items) - 1
+
+    while low <= high:
+        mid = (low + high) // 2  # Calculate the middle index
+
+        if items[mid] == target:
+            return mid  # Element found, return its index
+        elif items[mid] < target:
+            low = mid + 1  # Discard the left half
+        else:
+            high = mid - 1  # Discard the right half
+
+    return -1  # Element not found
+```
+This implementation defines a function `binary_search` that takes a sorted list (`items`) and a target element (`target`). It returns the index of the target element if found, or $$-1$$ if the element is not in the list. 
+
+The function uses a while loop to repeatedly narrow down the search range by adjusting the low and high indices based on the comparison of the middle element with the target.
+
+The function can be called:
+
+```python
+sorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+target_element = 7
+
+result = binary_search(sorted_list, target_element)
+
+if result != -1:
+    print(f"Element {target_element} found at index {result}.")
+else:
+    print(f"Element {target_element} not found in the list.")
+```
+Copy the code to the IDE you use for Python programming and try it out.  Change the `items` being searched.  They can be strings or floats, the data type does not matter.
+
+{: .callout.notice}
+> In the next section we'll use these algorithms to learn an important skill for debugging programs, that of tracing code.
+
+Mathematically, using the Big O notation introduced in the previous section, we can work out the number of "guesses" required or a given number of items:
+
+| Number of items in the list (`n`) | Maximum number of "guesses" |
+|:---------------------------------:|:---------------------------:|
+| 10,000 | 14 |
+| 1,000 | 10 |
+| 500 | 9 |
+|100 | 6 |
+| 50 | 5 |
+| 10 | 3 |
+
+This is $$O(log_2(n))$$
+
+## Questions
