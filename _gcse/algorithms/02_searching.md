@@ -57,6 +57,8 @@ else:
     print(f"{search_key} is not in the list")
 ```
 
+![Linear Search](/assets/img/linear_search.png)
+
 Notice how we have to start at the beginning of the list and compare the search key with every item in the list.  The boolean variable `found` is set to `True` if the item is there.  In the current algorithm we keep on searching for the item even when it has already been found.  This is the worst case behaviour of our algorithm i.e. if `n` is the length of the list then the worst case means we will be making a total of `n` comparisons.  Our current algorithm is *always* the worst case!  If the item we're looking for is the first item in the list we keep on searching ... what a waste of computing time.  We can improve on this by changing the loop in lines 8-10 to:
 
 ```python
@@ -131,6 +133,9 @@ if result != -1:
 else:
     print(f"Element {target_element} not found in the list.")
 ```
+
+![Binary Search](/assets/img/binary_search.png)
+
 Copy the code to the IDE you use for Python programming and try it out.  Change the `items` being searched.  They can be strings or floats, the data type does not matter.
 
 {: .callout.notice}
@@ -147,6 +152,6 @@ Mathematically, using the Big O notation introduced in the previous section, we 
 | 50 | 5 |
 | 10 | 3 |
 
-This is $$O(log_2(n))$$
+This is $$O(log_2 n)$$
 
 ## Questions

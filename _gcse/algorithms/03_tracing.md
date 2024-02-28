@@ -7,13 +7,26 @@ categories: [algorithms]
 {: .callout.objectives}
 >- first
 
-Often, when writing and implementing our algorithms using code, we do not get the results we are expecting.  We get an error.  There may be different types of errors:
+Often, when writing and implementing our algorithms using code, we do not get the results we are expecting.  We get an error.  There may be different types of errors.
 
-- **syntax error**: we use the wrong type fo statement, or there is a typo in our code.  When we try to run our Python code the interpreter will stop and alert us to the error we have made.  It will provide us with an error message - which might, sometimes, appear confusing to read but can be helpful in tracking down where we have gone wrong
-- **logic error**: Our program runs through to its conclusion, there are no syntax errors, but the result we get is not what we were expecting.  Our logic is wrong and we need to track down where the error might be located.  This can be difficult and time-consuming.  We can use a **trace table** to help.
-- **runtime error**: The last category of error causes our program to "crash" while it is running, perhaps we're trying to read from a file that does not exist or we've divided by zero or tried to apply an arithmetical operator to the wrong kind of data.  Good programmers should be alert to theses kind of errors - they should not occur.
+## Types of error
 
-Tracing an algorithm can help track down i.e. **debug** logic errors.  Let's first look at the process and principles then use the technique on code that does have a logic error that needs to be corrected.
+**Syntax Errors**
+
+Syntax errors are related to the structure or grammar of the code and occur when the programmer violates the rules of the programming language.  They are picked up by the compiler or interpreter during the compilation phase.  Typically these might include missing semicolons, mismatched parentheses, or typos in keywords. The program won't run until all syntax errors are fixed.
+
+**Logic Errors**
+
+Logic errors occur when the program's logic is flawed, leading to incorrect results or unexpected behavior. The code may run without producing any error messages, but the output is not what was intended.  Logic errors are usually discovered during testing and debugging phases and may involve tracing the code and analyzing the output to identify discrepancies.  The program runs, but it does not produce the expected or desired results.
+
+**Runtime Errors**
+
+Runtime errors occur during the execution of a program, they are not detected by the compiler but emerge when the program is running.  They are usually  identified by error messages displayed during program execution and typically might include division by zero, accessing an out-of-bounds array element, or using an undefined variable.  When that happens the execution of the program is interrupted or terminated.
+  
+Tracing an algorithm can help track down i.e. **debug** logic errors, and runtime errors.  Let's first look at the process and principles then use the technique on code that does have a logic error that needs to be corrected.
+
+{: .callout.notice}
+> A trace table can also be used to determine the purpose of the algorithm
 
 We'll start with the binary search algorithm from the previous section:
 
