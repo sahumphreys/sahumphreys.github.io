@@ -1,6 +1,6 @@
 ---
 title: Tracing an algorithm
-page: 4
+page: 6
 categories: [algorithms]
 ---
 
@@ -54,28 +54,28 @@ When tracing we play the role of the computer keeping a record of the **variable
 
 Our function has a number of important variables.  Make these the columns of a table:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-|        |     |      |     |           |        |
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|        |       |       |       |            |        |
 
 We know our target is 7 and lines 2-3 of our function can be entered quite easily into our table:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-| 7      |   0 |   9  |     |           |        |
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|   7    |   0   |   9   |       |            |        |
 
 Moving down our code, line 5 is `True` as 0 is less than 9, so we proceed to the next line and note the value iof `mid`, then check the value at `items[mid]`:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-| 7      |   0 |   9  |  4  |     5     |        | 
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|   7    |   0   |   9   |   4   |     5      |        |
 
 Line 8, we've  not found the target value in this position, the value is less than our target so we need to adjust the `low` value:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-| 7      |   0 |   9  |  4  |     5     |        | 
-|        |  5  |      |     |           |        |
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|   7    |   0   |   9   |   4   |     5      |        |
+|        |   5   |       |       |            |        |
 
 {: .callout.notice}
 > You do not need to repeat the values for `target`, `high`, `mid` etc..  It is assumed these have not changed - which, of course, they haven't.
@@ -84,47 +84,47 @@ We return to the top of the loop and repeat.
 
 Line 5 is still `True` and we can progress to work out the value for `mid` (line 6) and then get the value for `items[mid]`:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-| 7      |   0 |   9  |  4  |     5     |        | 
-|        |  5  |      |  7  |     8     |        |
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|   7    |   0   |   9   |   4   |     5      |        |
+|        |   5   |       |   7   |     8      |        |
 
 It's not our `target` value, but it is higher than our target so we use line 13 to adjust the value if `high`:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-| 7      |   0 |   9  |  4  |     5     |        | 
-|        |  5  |      |  7  |     8     |        |
-|        |     |  6   |     |           |        |
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|   7    |   0   |   9   |   4   |     5      |        |
+|        |   5   |       |   7   |     8      |        |
+|        |       |   6   |       |            |        |
 
 Returning to the top of the loop again, `low <= high`  is still `True` so we update the value if `mid` and get the value of `items[mid]` as before:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-| 7      |   0 |   9  |  4  |     5     |        | 
-|        |  5  |      |  7  |     8     |        |
-|        |     |  6   |     |           |        |
-|        |     |      |  5  |     6     |        |
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|   7    |   0   |   9   |   4   |     5      |        |
+|        |   5   |       |   7   |     8      |        |
+|        |       |   6   |       |            |        |
+|        |       |       |   5   |     6      |        |
 
 It's *still* not our target value so we continue.  The value is less than the target so we update the value of `low`:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-| 7      |   0 |   9  |  4  |     5     |        | 
-|        |  5  |      |  7  |     8     |        |
-|        |     |  6   |     |           |        |
-|        |     |      |  5  |     6     |        |
-|        |  6  |      |     |           |        |      
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|   7    |   0   |   9   |   4   |     5      |        |
+|        |   5   |       |   7   |     8      |        |
+|        |       |   6   |       |            |        |
+|        |       |       |   5   |     6      |        |
+|        |   6   |       |       |            |        |
 
 Returning to the top of the loop again, it evaluates to `True` and we proceed as before to the next line to get the value of `mid` and the corresponding item in the list:
 
-| target | low | high | mid | items[mid]| output |
-|:------:|:---:|:----:|:---:|:---------:|:------:|
-| 7      |   0 |   9  |  4  |     5     |        | 
-|        |  5  |      |  7  |     8     |        |
-|        |     |  6   |     |           |        |
-|        |     |      |  5  |     6     |        |
-|        |  6  |      |     |           |        | 
-|        |     |      |  6  |     7     |        | 
+| target |  low  | high  |  mid  | items[mid] | output |
+| :----: | :---: | :---: | :---: | :--------: | :----: |
+|   7    |   0   |   9   |   4   |     5      |        |
+|        |   5   |       |   7   |     8      |        |
+|        |       |   6   |       |            |        |
+|        |       |       |   5   |     6      |        |
+|        |   6   |       |       |            |        |
+|        |       |       |   6   |     7      |        |
 
 Now the `target` is the same as `items[mid]` and on line 9 we can return the value iof `mid` from our function and we are done.

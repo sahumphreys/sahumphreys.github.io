@@ -1,6 +1,6 @@
 ---
 title: Searching Algorithms
-page: 3
+page: 4
 categories: [algorithms]
 ---
 
@@ -144,13 +144,13 @@ Copy the code to the IDE you use for Python programming and try it out.  Change 
 Mathematically, using the Big O notation introduced in the previous section, we can work out the number of "guesses" required or a given number of items:
 
 | Number of items in the list (`n`) | Maximum number of "guesses" |
-|:---------------------------------:|:---------------------------:|
-| 10,000 | 14 |
-| 1,000 | 10 |
-| 500 | 9 |
-|100 | 6 |
-| 50 | 5 |
-| 10 | 3 |
+| :-------------------------------: | :-------------------------: |
+|              10,000               |             14              |
+|               1,000               |             10              |
+|                500                |              9              |
+|                100                |              6              |
+|                50                 |              5              |
+|                10                 |              3              |
 
 This is $$O(log_2 n)$$
 
