@@ -4,6 +4,29 @@ layout: page
 categories: [algorithms]
 ---
 
+![Algorithms](/assets/img/algorithms.jpg)
+
+An **algorithm** is:
+
+> a set of mathematical instructions or rules that, especially if given to a computer, will help to calculate an answer to a problem
+
+That is, a step-by-step procedure or a set of well-defined instructions designed to perform a specific task or solve a particular problem. 
+
+Algorithms can be found in various fields, not just in computing. They are commonly used in mathematics, physics, engineering, and other disciplines to define processes for solving problems. In the context of computer science, algorithms are crucial for programming and are often implemented in software to automate tasks or computations.
+
+Key characteristics of algorithms include:
+
+1. **Input:** Algorithms take some input(s), which are the data or values they operate on.
+2. **Output:** Algorithms produce output(s), which represent the result or solution to the problem.
+3. **Definiteness:** Each step in the algorithm must be precisely and unambiguously defined.
+4. **Finiteness:** The algorithm must stop after a number of steps.
+5. **Effectiveness:** Each step must be simple and executable in a given amount of time.
+
+Algorithms are fundamental to the field of computer science and are used in various applications, such as sorting data, searching for information, optimizing processes, and more. They serve as the foundation for developing efficient and effective software solutions.
+
+In this section we look at how we can create, interpret, complete and refine algorithms as well as how the algorithm can be expressed without using a programming language.  Both pseudocode and flowcharts will be used when considering algorithms used to accomplish searching and sorting.
+
+
  <!-- The principles of computational thinking are foundational concepts that help individuals approach and solve problems in a way that a computer could execute. These principles are essential in computer science and can be applied to a wide range of problems. Here's an explanation of each: -->
 
 <!-- Abstraction: -->

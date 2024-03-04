@@ -11,8 +11,33 @@ categories: [algorithms]
 >- Know how pattern recognition leads to the creation of generalizations.
 >- Understand how abstraction simplifies complex systems and allows for the creation of models.
 >- Identify the core principles of algorithmic thinking, including sequential steps, clear instructions, input and output, reusability, and efficiency.
-   
-These learning objectives cover a range of cognitive levels, from basic understanding to application and critical thinking, ensuring a comprehensive understanding of computational thinking for a GCSE Computer Science student.
+
+Before we can write the instructions for the computer solve a given problem we need to work out what the steps are that we need to take to solve the problem.  We need to know the **how**.  This is not always straightforward and we need to train our brain to think like a computer when designing our algorithms.
+
+Take the problem of finding the largest value in a list of numbers e.g. `[23, 8, -76, 49, 65, -2]`.  We can simply scan through this list of values and see that $$65$$ is the largest value.  But how do we set out the set of instructions for a computer to execute to solve this problem.  We need to "think like a computer", or in other words we need to apply "computational thinking".
+
+## Input $$\rightarrow$$ Process $$\rightarrow$$ Output
+
+For all problems there will be some data we need to work with, our **input** and a result we're looking to obtain, our **output**.  For all algorithms we need to spend time thinking first about our data.
+
+![Input-Process-Output](/assets/img/input-process-output.png)
+
+**Inputs**: Inputs are the data or values that the algorithm takes as input.  For our problem of finding the largest value ina  list of values it will be the list itself: `[23, 8, -76, 49, 65, -2]`.  It's the raw material we will work with.  It may be the same set of values if we were wanting to sort the values into ascending order.
+
+**Outputs**: The output is the result produced by the algorithm after processing the input data.  It may be a single value as in the case of finding the largest value.  here, we're expecting the output to be $$65$$.  For a sorting algorithm it will be list of values sorted into ascending order.
+
+**Process**: The process is the series of steps or operations the algorithm performs on the input to transform it into the desired output.  For our finding the maximum value algorithm we might come up with the following set of instructions:
+
+1. Start with the first number in the list and consider it as the current maximum.
+2. Iterate through the remaining numbers in the list.
+3. For each number, compare it with the current maximum.
+4. If the current number is greater than the current maximum, update the current maximum to be that number.
+5. Continue this process until all numbers in the list have been considered.
+6. The final value of the current maximum is the maximum number in the list.
+
+Remember, this is exactly what you would have done when visually scanning the list for the largest value.  Before returning to this algorithm we;ll unpack some of the principles of thinking like a computer, or computational thinking.
+
+## Computational thinking
 
 Underpinning the whole of the GCSE in computer science is the development and understanding of **computational thinking**, basically "thinking like a computer".  Computational thinking provides a set of skills and analytical abilities that are deemed as being increasingly important in the 21st century.  It has application not just for computer science but also across other disciplines including physics, biology, chemistry, economics, sociology, and engineering itself. 
 
@@ -28,9 +53,6 @@ There are four key components of computational thinking:
 2. **Pattern Recognition:** Identifying patterns, trends, and similarities within and between problems.
 3. **Abstraction:** Focusing on the essential details while ignoring unnecessary information, helping to create generalisations and models.
 4. **Algorithmic Thinking:** Developing a step-by-step solution or set of rules to solve a problem.
-
-In this section we will expand on these concepts by looking at problem solving in the large, how to design and express an algorithm without using a programming language, review some examples of algorithms used for searching and sorting and consider some ways these algorithms might be improved.
-
 
 ## Decomposition
 
@@ -59,6 +81,21 @@ It's a simple example, but the concept of decomposition scales to more complex p
 {: .callout.notice}
 > Our algorithm for making a cheese sandwich does not require a programming language.  The algorithm and the code we use to implement that algorithm are two quite separate concepts.
 
+In "Finding the Max" we decomposed the high level problem into a set of lower level instructions:
+
+1. Start with the first number in the list and consider it as the current maximum.
+2. Iterate through the remaining numbers in the list.
+3. For each number, compare it with the current maximum.
+4. If the current number is greater than the current maximum, update the current maximum to be that number.
+5. Continue this process until all numbers in the list have been considered.
+6. The final value of the current maximum is the maximum number in the list.
+
+Embedded in these instruction will be constructs you recognise from programming:
+
+- Initialisation: setting the first value to the current maximum
+- Iteration: looping through each of the values in turn
+- Selection: If the current number is greater than the current maximum then set current maximum to that value
+
 ## Pattern Recognition
 
 Pattern recognition involves identifying patterns, trends, and similarities within and between problems.  For example, all sorting algorithm (and there are many different ways to sort a list of items as well see later) share common steps, such as comparing elements and swapping them.  Thus we can create an algorithm that swaps elements in the list which can then be used in all the different sorting algorithms that require this function.
@@ -67,7 +104,7 @@ We could take the previous example and realise that making a cheese sandwich and
 
 Thus, the process of "making a sandwich" can be generalised.  The specific detail of the type of sandwich (i.e. cheese or tuna) can be passed in to this process, to the person making the sandwich , and called upon when that relevant step is encountered in the sandwich making process.  We do not to re-examine the algorithm for making a sandwich, that's been done and described the only difference will be the filling to use.
 
-Sandwiches are a trivial example but we see pattern recognition be used and applied in a whole host of more complex situations.  Think of a "Find the Max" algorithm, finding the largest value in a list of values. If we then have, in a different problem, the task of finding the longest word in a set of given words we can reapply the same solution but this time using strings and their associated lengths.  The pattern tells us that this is really the same problem, but the data we use will be different.  So we may redefine our "Finding the Max" algorithm so the same steps can be used.
+Sandwiches are a trivial example but we see pattern recognition be used and applied in a whole host of more complex situations.  Think of the "Find the Max" algorithm, finding the largest value in a list of values. If we then have, in a different problem, the task of finding the longest word in a set of given words we can reapply the same solution but this time using strings and their associated lengths.  The pattern tells us that this is really the same problem, but the data we use, our **inputs**, will be different but the process will be very similar.
 
 In pattern recognition we are looking for:
 
@@ -76,7 +113,6 @@ In pattern recognition we are looking for:
 - **Applying Known Solutions to New Problems**: When a pattern is recognized, individuals can apply solutions that worked in similar situations to the current problem. For instance, if a programmer has successfully used a sorting algorithm in one program, recognizing the need for sorting in a new program may prompt the reuse of the same or a similar algorithm.
 - **Abstraction through Pattern Recognition**: Abstraction, another principle of computational thinking, often involves recognizing common elements among different problems. Pattern recognition supports abstraction by allowing individuals to focus on essential similarities while ignoring irrelevant details.
 - **Efficiency Improvements**:  Recognizing patterns helps in creating more efficient solutions. If a problem can be mapped onto a known pattern, it is possible to reuse or adapt existing solutions, saving time and effort.
-
 
 ## Abstraction
 
@@ -103,6 +139,8 @@ Abstraction brings many benefits to the problem solving process:
 
 In essence, abstraction is about creating simplified, yet effective, representations of complex systems. It allows computational thinkers to manage the complexity of problems, design scalable solutions, and build a foundation for problem-solving in computer science. Abstraction is closely intertwined with other computational thinking principles like decomposition and pattern recognition, forming a comprehensive approach to tackling complex challenges.
 
+In "Finding the Max", we do not know what these values actually represent.  It may be significant but it may be unnecessary detail.  In any event, if we're finding the largest of these values it does not matter if those values represent temperatures, gross domestic product of a country, stock market movements for a company or weekly results from a fantasy football league!  We can abstract that detail away and just focus on what is essential to find the largest value.
+
 ## Algorithmic Thinking
 
 Algorithmic thinking involves developing a step-by-step solution or set of rules to solve a problem. Creating a recipe for baking a cake, or making a sandwich is an example of algorithmic thinking. It specifies the exact steps to be followed, such as mixing ingredients, baking at a certain temperature, and cooling.
@@ -116,19 +154,16 @@ There are some core principles to consider when thinking algorithmically, these 
 - **Efficiency and Optimization**:  Algorithmic thinking involves considering the efficiency of a solution. This includes minimizing the number of steps, optimizing resource usage (such as time and space), and ensuring the algorithm performs well in various scenarios.
 - **Pseudocode and Flowcharts**:  Communicating algorithms often involves using **pseudocode** or **flowcharts.** Pseudocode is a high-level description of the algorithm using a mix of natural language and simple code-like structures. Flowcharts use visual symbols to represent the flow of control in an algorithm.
 
-Let's take a simple example of algorithmic thinking for the task of finding the maximum number in a list:
+In "Finding The Max" we set out the following steps:
 
-**Problem:** Find the maximum number in a list of integers.
+ 1. Start with the first number in the list and consider it as the current maximum.
+ 2. Iterate through the remaining numbers in the list.
+ 3. For each number, compare it with the current maximum.
+ 4. If the current number is greater than the current maximum, update the current maximum to be that number.
+ 5. Continue this process until all numbers in the list have been considered.
+ 6. The final value of the current maximum is the maximum number in the list.
 
-**Algorithmic Thinking:**
-   1. Start with the first number in the list and consider it as the current maximum.
-   2. Iterate through the remaining numbers in the list.
-   3. For each number, compare it with the current maximum.
-   4. If the current number is greater than the current maximum, update the current maximum to be that number.
-   5. Continue this process until all numbers in the list have been considered.
-   6. The final value of the current maximum is the maximum number in the list.
-
-This algorithmic approach breaks down the task into a series of simple steps, providing a systematic way to find the maximum number in a list regardless of its size.
+This algorithmic approach breaks down the task into a series of simple steps, providing a systematic way to find the maximum number in a list regardless of its size.  These steps will still work with 10, 100 or 1,000,000 items.
 
 ## Questions
 

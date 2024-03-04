@@ -6,42 +6,56 @@ layout: default
 
 <h2>{{ site.data.documents.docs.specs_list_title}}</h2>
 
-{% assign specifications = site.data.documents.docs.specifications  %}
+{% assign specifications = site.data.documents.docs.specifications %}
 
 {% for doc in specifications %}
-    <details>
-        <summary>
-            <b class="detail-heading">{{ doc.level }}</b>
-        </summary>
-        {% for entry in doc.spec %}
-        <ul>
-            <li><a href="{{entry.link}}" target="_blank">{{entry.board}}</a></li>
-        </ul>
-        {% endfor %}
-    </details>
+<details>
+    <summary>
+        <b class="detail-heading">{{ doc.level }}</b>
+    </summary>
+    {% for entry in doc.spec %}
+    <ul>
+        <li><a href="{{entry.link}}" target="_blank">{{entry.board}}</a></li>
+    </ul>
+    {% endfor %}
+</details>
 {% endfor %}
 
 
 
-    
+
 
 <h2>{{ site.data.documents.docs.past_papers_list_title }}</h2>
 
 {% assign past-papers = site.data.documents.docs.past_papers %}
 {% for doc in past-papers %}
-    <details>
-        <summary><b class="detail-heading">{{ doc.level }}</b></summary>
+<details>
+    <summary><b class="detail-heading">{{ doc.level }}</b></summary>
+    <ul>
+        {% for board in doc.boards %}
+        <li>{{ board.name }}</li>
         <ul>
-            {% for board in doc.boards %}
-                <li>{{ board.name }}</li>
-                <ul>
-                {% assign papers = board.papers | sort: "year" | reverse %}
-                {% for paper in papers %}
-                    <li>{{ paper.year}}: Paper {{ paper.paper_number }}</li>
-                {% endfor %}
-                </ul>
+            {% assign papers = board.papers | sort: "year" | reverse %}
+            {% for paper in papers %}
+            <li>{{ paper.year}}: Paper {{ paper.paper_number }}</li>
             {% endfor %}
         </ul>
-    </details>
+        {% endfor %}
+    </ul>
+</details>
 {% endfor %}
 
+<h2>{{ site.data.documents.docs.pseudocode-list-title }}</h2>
+
+{% assign pseudocode = site.data.documents.docs.pseudocode %}
+{% for doc in pseudocode %}
+<details>
+    <summary><b class="detail-heading">{{ doc.level }}</b></summary>
+    {% for guide in doc.boards %}
+    <ul>
+        <li><a href="{{guide.link}}" target="_blank">{{guide.name}}</a></li>
+    </ul>
+    {% endfor %}
+    </ul>
+</details>
+{% endfor %}

@@ -60,3 +60,13 @@ past_papers:
           - year: 2022
             paper_number: 2
 
+
+pseudocode-list-title: Pseudocode Guides
+pseudocode:
+  - level: GCSE
+    boards:
+      - name: AQA
+        link: /docs/AQA-8525-NG-PC.pdf
+      - name: OCR
+        link: /docs/202654-pseudocode-guide.pdf
+
