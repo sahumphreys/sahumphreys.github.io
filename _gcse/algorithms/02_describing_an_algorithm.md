@@ -18,7 +18,7 @@ In the previous section we were working on an algorithm to find the largest valu
 
 Structured English is a high-level description language that uses natural language constructs to represent the logic of a process or algorithm. 
 
-It is some step removed from the code used for a programming language.  It is intended for humans to read who may not gbe familiar with the syntax or forms used in a formal programming language such as Python.  
+It is some step removed from the code used for a programming language.  It is intended for humans to read who may not be familiar with the syntax or forms used in a formal programming language such as Python.  
 
 For GCSE Computer Science we need to be familiar with a more stylised form known as **pseudocode** and how **flowcharts** can also be used to describe an algorithm. Both [AQA](/docs/AQA-8525-NG-PC.pdf) and [OCR](/docs/202654-pseudocode-guide.pdf) have their own versions of pseudocode and require students to express their answers to any questions requiring an algorithm using their version of pseudocode.
 
@@ -67,9 +67,19 @@ next i
 print current_maximum
 ```
 
-Notice, in both cases, how the pseudocode includes programming type constructs of assignment, iteration and selection but is not expressed in any particular programming language.
+In both cases note how the pseudocode differs from the Structured English version.  It look more like programming code but stops short of being an actual programming language.  As programmers we can recognise assignment, a loop and a section statement, it may not take someone not familiar with programming that long to work out the purpose of this algorithm.
 
+The pseudocode should express unambiguously the steps required to solve the given problem.  We should be able to take the pseudocode and convert into the programming language of our choice: Python, C# etc..
 
+## Flowcharts
 
+Another form we can use is a visual form, a diagram to represent the steps known as a **flowchart**.
 
+The flowchart uses various shapes and arrows to illustrate the steps and the flow of control within that process. It is a diagrammatic tool that provides a clear and systematic way to represent the logical sequence of actions or decisions in a system.
+
+They serve the same purpose as pseudocode and can be easier for non-programmers to follow and understand.
+
+The flowchart uses a number of symbols to represent the steps in an algorithm and their sequence:
+
+![Flowchart symbols](/assets/img/flowchart-symbols.png)
 
