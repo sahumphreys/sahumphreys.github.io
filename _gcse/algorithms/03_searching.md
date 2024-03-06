@@ -5,7 +5,14 @@ categories: [algorithms]
 ---
 
 {: .callout.objectives}
->- first
+>- Understand the concept of linear search as a sequential algorithm for finding a specific element in a list.
+>- Know how to implement a linear search algorithm in pseudocode and a programming language (e.g., Python).
+>- Understand the binary search algorithm as a more efficient searching technique that requires a sorted list.
+>- Know how to implement a binary search algorithm in pseudocode and a programming language (e.g., Python).
+>- Compare the linear search and binary search algorithms in terms of efficiency and suitability for different scenarios.
+>- Gain experience in tracing and debugging code for both linear and binary search algorithms.
+
+These learning objectives cover a range of skills and knowledge related to searching algorithms, algorithmic efficiency, coding implementation, and problem-solving in a computer science context.
 
 Sifting through a whole bunch of data looking for a particular item is a very common occurrence, not least when we use a computer.  There are a number of algorithms we can use to **search** for data.  Here we look at two:
 
@@ -155,3 +162,14 @@ Mathematically, using the Big O notation introduced in the previous section, we 
 This is $$O(log_2 n)$$
 
 ## Questions
+
+1. Why is a linear search also known as a "sequential search," how does it operate on a list?
+2. Write the pseudocode for a linear search algorithm
+3. Convert the pseudocode into Python code
+4. Define and explain the worst-case behavior of a linear search.
+5. Describe the main principles of a binary search.
+6. Why does a binary search require the list to be sorted?
+7. Write pseudocode for a binary search algorithm.
+8. Implement the binary search in Python for a given sorted list.
+9. Compare the efficiency of linear and binary search algorithms. In what scenarios would you prefer to use a binary search over a linear search?
+10. Provide a real-world scenario where a linear search would be suitable.

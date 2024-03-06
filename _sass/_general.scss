@@ -340,3 +340,18 @@ button {
 .footnote {
     font-size: 0.7rem;
 }
+
+#array-container {
+    display: flex;
+    gap: 5px;
+    margin: 20px;
+    background: #efefef;
+    height: 200px;
+}
+
+.bar {
+    background: $primary-color-35;
+    display: inline-block;
+    height: 120px;
+    transition: height 0.3s;
+}

@@ -70,34 +70,3 @@ In this section we look at how we can create, interpret, complete and refine alg
 
 
 
-<!-- Bubble Sort: -->
-
-<!-- Overview: Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the entire list is sorted. -->
-<!-- Process: -->
-<!-- Compare the first two elements. -->
-<!-- If they are in the wrong order, swap them. -->
-<!-- Move to the next pair of elements and repeat the comparison and swapping. -->
-<!-- Continue this process until the end of the list. -->
-<!-- Repeat the entire process until no more swaps are needed, indicating that the list is now sorted. -->
-<!-- Use Case: Bubble Sort is straightforward but less efficient compared to other sorting algorithms. It is suitable for small datasets or educational purposes but is not recommended for large datasets due to its time complexity. -->
-<!-- Merge Sort: -->
-
-<!-- Overview: Merge Sort is a divide-and-conquer algorithm. It works by dividing the unsorted list into n sublists, each containing one element, and repeatedly merging sublists to produce new sorted sublists until there is only one sublist remaining — the sorted list. -->
-<!-- Process: -->
-<!-- Divide the unsorted list into n sublists. -->
-<!-- Recursively sort each sublist. -->
-<!-- Merge the sorted sublists to produce new sorted sublists until there is only one sublist remaining. -->
-<!-- Use Case: Merge Sort is efficient for large datasets and is a stable sorting algorithm, meaning that it maintains the relative order of equal elements. -->
-<!-- Insertion Sort: -->
-
-<!-- Overview: Insertion Sort is a simple sorting algorithm that builds the final sorted array one element at a time. It is much less efficient on large lists compared to more advanced algorithms such as Merge Sort or QuickSort. -->
-<!-- Process: -->
-<!-- Start with an initially empty sorted list. -->
-<!-- Iterate through the unsorted list, taking one element at a time. -->
-<!-- Insert each element into its correct position in the sorted list. -->
-<!-- Repeat until the entire unsorted list is processed. -->
-<!-- Use Case: Insertion Sort is suitable for small datasets or partially sorted lists. It's an in-place algorithm, meaning it doesn't require additional memory for sorting. -->
-<!-- Comparison: -->
-
-<!-- Efficiency: Merge Sort is generally more efficient than Bubble Sort and Insertion Sort, especially for large datasets. -->
-<!-- Space Complexity: Bubble Sort and Insertion Sort are in-place algorithms, meaning they don't require additional memory. Merge Sort, on the other hand, needs extra space for merging the sublists.  -->

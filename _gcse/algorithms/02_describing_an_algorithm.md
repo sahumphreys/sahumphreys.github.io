@@ -5,7 +5,10 @@ categories: [algorithms]
 ---
 
 {: .callout.objectives}
->- first
+>- Understand the logical steps involved in solving a problem using algorithms
+>- Know the difference between Structured English and Pseudocode
+>- Know how to express an algorithms using pseudocode
+>- Be able to read and comprehend algorithms represented in the form of flowcharts
 
 In the previous section we were working on an algorithm to find the largest value in a list of numbers: `[23, 8, -76, 49, 65, -2]`.  We set out the steps using **Structured English**:
 
@@ -83,3 +86,16 @@ The flowchart uses a number of symbols to represent the steps in an algorithm an
 
 ![Flowchart symbols](/assets/img/flowchart-symbols.png)
 
+The flowchart for the find the maximum algorithm might be:
+
+![Find the maximum](/assets/img/find_max.png)
+
+Flowcharts are a valuable tool for many situations.  It is required for the GCSE that you both know how to create a flowchart and to read the algorithm from the given flowchart.  However, they can be time consuming to construct and for more complex algorithms the diagrams quickly become large and fiddly to deal with.  They do not handle detailed code well but are OK for high level view of an algorithm and useful for sketching ideas.
+
+## Questions
+
+1.  What is the key difference between Structured English and Pseudocode?
+2.  Write an algorithm using pseudocode to multiply two numbers entered by the user and displays the result.
+3.  Write an algorithm using pseudocode that reads in from the keyboard 5 numbers, calculates the average of those numbers and displays the result to screen
+4. Create an algorithm using pseudocode that checks if a given number is a prime number. Include appropriate conditions and loops to handle the checking process.
+5.  Draw a flowchart to login to a Facebook account (or other online web/social media account)
