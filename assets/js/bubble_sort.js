@@ -2,32 +2,39 @@
 
 let canvas;
 let ctx;
+const firstColour = "#336699";
+const swapColour = "#990000";
+const sortedColour = "#009900";
+const arrayLength = 12;
+const max = 30;
 
-const unsortedArray = generateRandomArray(12);
+const unsortedArray = generateRandomArray(arrayLength);
 
 function generateRandomArray(length) {
-    return Array.from({ length }, () => Math.floor(Math.random() * 20) + 1);
+    return Array.from({ length }, () => Math.floor(Math.random() * max) + 1);
 }
 
-function drawBars(array, highlightIndices = [], sortedIndices = []) {
+const sortedIndices = [];
+
+function drawBars(array, highlightIndices = []) {
     const barWidth = 40;
     const barSpacing = 10;
-
+    
     array.forEach((value, index) => {
         const x = index * (barWidth + barSpacing);
-        const height = value * 10;
+        const height = value * 9;
 
         // Change color based on highlighting and sorted state
         if (highlightIndices.includes(index)) {
-            ctx.fillStyle = 'red'; // Highlighting color
+            ctx.fillStyle = swapColour; // Highlighting color
         } else if (sortedIndices.includes(index)) {
-            ctx.fillStyle = 'green'; // Sorted color
+            ctx.fillStyle = sortedColour; // Sorted color
         } else {
-            ctx.fillStyle = 'blue'; // Default color
+            ctx.fillStyle = firstColour; // Default color
         }
 
         // Draw the bar
-        ctx.fillRect(x, 300 - height, barWidth, height);
+        ctx.fillRect(x+5, 300 - height, barWidth, height);
 
         // Display the value as text above the bar
         ctx.fillStyle = 'black';
@@ -53,12 +60,14 @@ async function bubbleSort(array) {
         }
 
         // Mark the last element as sorted
+        sortedIndices.push(array.length - i - 1);
         drawBars(array, [], [array.length - i - 1]);
-        await new Promise(resolve => setTimeout(resolve, 300));
+        await new Promise(resolve => setTimeout(resolve, 1000));
     }
 
     // Mark the first element as sorted (entire array is sorted)
-    drawBars(array, [], [0]);
+    sortedIndices.push(0);
+    drawBars(array, []);
 }
 
 async function swapBars(array, index1, index2) {

@@ -35,15 +35,18 @@ The top level algorithm is:
 
 The Bubble Sort is straightforward but less efficient compared to other sorting algorithms. It is suitable for small datasets or educational purposes but is not recommended for large datasets as the time taken to sort the list increases significantly as the number of items in the list increases.
 
-### Bubble Sort Animation
+The animation illustrates the algorithm.  Note how, after the first pass through the items the value with the highest value is in the right-most position, it has "bubbled up" to the top.  After the second pass through the items the item with the next highest value is in the correct position, and so on until the list has been sorted.
 
 <!-- ![Bubble Sort Animation](/assets/img/bubble-sort.gif) -->
 
+<center>
 <canvas id="sortCanvas" width="600" height="300" style="border:1px solid;"></canvas>
-
+</center>
 
 <button onclick="startBubbleSort()">Start Bubble Sort</button>
-<!-- <div id="array-container"></div> -->
+
+{: .callout.notice}
+> Follow the animation closely.  You may be able to spot an improvement?  Depending on the values chosen (at random) and their starting positions a sorted result might be obtained before the number of iterations has been reached.  In this code, it continues to check for swaps even when no swaps have taken place on the previous iteration.
 
 <script src="{{ site.baseurl }}/assets/js/bubble_sort.js"></script>
 
