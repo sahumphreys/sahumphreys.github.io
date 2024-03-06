@@ -37,10 +37,13 @@ The Bubble Sort is straightforward but less efficient compared to other sorting 
 
 ### Bubble Sort Animation
 
-![Bubble Sort Animation](/assets/img/bubble-sort.gif)
+<!-- ![Bubble Sort Animation](/assets/img/bubble-sort.gif) -->
 
-<div id="array-container"></div>
+<canvas id="sortCanvas" width="600" height="300" style="border:1px solid;"></canvas>
+
+
 <button onclick="startBubbleSort()">Start Bubble Sort</button>
+<!-- <div id="array-container"></div> -->
 
 <script src="{{ site.baseurl }}/assets/js/bubble_sort.js"></script>
 
