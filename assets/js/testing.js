@@ -8,13 +8,47 @@ document.getElementById("paragraph").textContent = "Hello, stranger";
 var heading = "Hello World";
 document.getElementById("heading").textContent = heading;
 
-// var canvas = document.createElement("canvas");
-// canvas.width = 500;
-// canvas.height = 250;
-// var ctx = canvas.getContext("2d");
-// ctx.font = "30px cursive";
-// ctx.fillText("Hello", 50, 50);
-// document.body.appendChild(canvas);
+// deal with a canvas
+function draw() {
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+    // draw a rectangle
+    ctx.fillStyle = "#336699";
+    ctx.fillRect(10, 10, 50, 50)
+
+    ctx.fillStyle = "rgb(0 0 200 / 30%)";
+    ctx.fillRect(30, 30, 50, 50);
+
+    ctx.fillStyle = "rgb(0 0 0 / 80%)";
+    ctx.fillRect(100, 100, 100, 100)
+    ctx.clearRect(110, 110, 80, 80);
+    ctx.strokeRect(120, 120, 60, 60);
+
+    smiley(ctx)
+  }
+}
+
+function smiley(ctx) {
+  ctx.beginPath();
+  ctx.fillStyle = "red";
+  ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+  ctx.moveTo(110, 75);
+  ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
+  ctx.moveTo(65, 65);
+  ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+  ctx.moveTo(95, 65);
+  ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+  ctx.stroke();
+}
+
+window.addEventListener("load", draw);
+
+
+
+
+
+
 
 
 var canvas, ctx, radius;

@@ -40,7 +40,7 @@ The animation illustrates the algorithm.  Note how, after the first pass through
 <!-- ![Bubble Sort Animation](/assets/img/bubble-sort.gif) -->
 
 <center>
-<canvas id="sortCanvas" width="600" height="300" style="border:1px solid;"></canvas>
+<canvas id="sortCanvas" width="600" height="300"></canvas>
 </center>
 
 <button onclick="startBubbleSort()">Start Bubble Sort</button>
