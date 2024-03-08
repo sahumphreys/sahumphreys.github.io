@@ -26,6 +26,7 @@ function draw() {
     ctx.strokeRect(120, 120, 60, 60);
 
     smiley(ctx)
+    
   }
 }
 
