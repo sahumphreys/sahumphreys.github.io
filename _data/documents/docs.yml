@@ -17,13 +17,16 @@ specifications:
   - level: GCSE
     spec:
       - board: Pearson International
-        link: pearson-international-gcse-CS.pdf
+        link: /docs/pearson-international-gcse-CS.pdf
       
       - board: OCR
         link: /docs/558027-specification-gcse-computer-science-j277.pdf
       
       - board: AQA
         link: /docs/AQA-8525-SP-2020.pdf
+
+      - board: Cambridge International
+        link: /docs/595424-2023-2025-syllabus.pdf
 
 past_papers_list_title: Past Papers
 past_papers:
@@ -69,4 +72,6 @@ pseudocode:
         link: /docs/AQA-8525-NG-PC.pdf
       - name: OCR
         link: /docs/202654-pseudocode-guide.pdf
+      - name: Pearson (International)
+        link: /docs/pearson/Pseudocode_Command_Set_4CP0_02.pdf
 
