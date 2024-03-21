@@ -62,6 +62,64 @@ past_papers:
             paper_number: 1
           - year: 2022
             paper_number: 2
+      - name: Pearson (International)
+        papers:
+          - year: 2019
+            month: May
+            paper_number: 1
+            link: /docs/past_papers/PearsonInternational_2019/4CP0_01_que_20190521.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2019/4CP0_01_rms_20190822.pdf
+          - year: 2019
+            month: June
+            paper_number: 2
+            link: /docs/past_papers/PearsonInternational_2019/4CP0_02_que_20190608.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2019/4CP0_02_msc_20190822.pdf
+            data: /docs/past_papers/PearsonInternational_2019/4CP0-02-data-files-june-2019.zip
+          - year: 2020
+            month: May
+            paper_number: 1
+            link: /docs/past_papers/PearsonInternational_2020/4CP0_01_que_20201103.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2020/4CP0_01_msc_20210211.pdf
+          - year: 2020
+            month: June
+            paper_number: 2
+            link: /docs/past_papers/PearsonInternational_2020/4CP0_02_que_20201117.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2020/4CP0_2A_msc_20210211.pdf
+            data: /docs/past_papers/PearsonInternational_2020/data-files-4cp0-02-november-2020.zip
+          - year: 2021
+            month: May
+            paper_number: 1
+            link: /docs/past_papers/PearsonInternational_2021/4CP0_01_que_20210429.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2021/4CP0_01_rms_20210604.pdf
+          - year: 2021
+            month: June
+            paper_number: 2
+            link: /docs/past_papers/PearsonInternational_2021/4CP0_02_que_20210427.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2021/4CP0_2A_rms_20210604.pdf
+            data: /docs/past_papers/PearsonInternational_2021/data-files-4cp0-02-june-2021.zip
+          - year: 2021
+            month: November
+            paper_number: 1
+            link: /docs/past_papers/PearsonInternational_2021_Nov/4CP0_01_que_20211120.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2021_Nov/4CP0_01_rms_20220224.pdf
+          - year: 2021
+            month: November
+            paper_number: 2
+            link: /docs/past_papers/PearsonInternational_2021_Nov/4CP0_02_que_20211116.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2021_Nov/4CP0_2c_rms_20220224.pdf
+            data: /docs/past_papers/PearsonInternational_2021_Nov/data-files-4cp0-02-november-2021.zip
+          - year: 2022
+            month: May
+            paper_number: 1
+            link: /docs/past_papers/PearsonInternational_2022/4cp0-01-que-20220521.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2022/4cp0-01-rms-20220825.pdf
+          - year: 2022
+            month: June
+            paper_number: 2
+            link: /docs/past_papers/PearsonInternational_2022/4cp0-02-que-20220609.pdf
+            mark_scheme: /docs/past_papers/PearsonInternational_2022/4cp0-2a-rms-20220825.pdf
+            data: #
+
 
 
 pseudocode-list-title: Pseudocode Guides
