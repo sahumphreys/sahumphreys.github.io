@@ -106,7 +106,7 @@ else:
 7. What will be the output from this program?
 
     ```py
-    i=5
+    i=5     
     j=8
     if i < j:
         print (i is smaller than j)
@@ -119,9 +119,9 @@ else:
 8. What will be the output from this program?
 
     ```py
-    hour=9
-    if (hour>= 5 and hour< 12):
-        print (“good morning”)40
+    hour=17
+    if (hour >= 5 and hour < 12):
+        print (“good morning”)
     elif (hour>= 12 and hour <=17):
         print (“good afternoon”)
     else:
