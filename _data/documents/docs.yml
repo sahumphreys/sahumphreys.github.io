@@ -10,20 +10,36 @@ specifications:
     spec:
       - board: AQA
         link: /docs/AQA-7516-7517-SP-2015.pdf
+        image: /assets/img/aqa_logo.png
+        url: /aqa
       
       - board: OCR
         link: /docs/OCR-A-Level.pdf
+        image: /assets/img/ocr_logo.png
+        url: /ocr
   
   - level: GCSE
     spec:
-      - board: Pearson International
-        link: /docs/pearson-international-gcse-CS.pdf
-      
       - board: OCR
         link: /docs/558027-specification-gcse-computer-science-j277.pdf
+        image: /assets/img/ocr_logo.png
       
       - board: AQA
         link: /docs/AQA-8525-SP-2020.pdf
+        image: /assets/img/aqa_logo.png
+
+      - board: Pearson/Edexcel
+        link:
+        image: /assets/img/pearson_logo.png
+
+      - board: WJEC/Eduqas
+        link:
+        image: /assets/img/wjec_logo.png
+
+
+      - board: Pearson International
+        link: /docs/pearson-international-gcse-CS.pdf
+        image: /assets/img/pearson_logo.png
 
       - board: Cambridge International
         link: /docs/595424-2023-2025-syllabus.pdf

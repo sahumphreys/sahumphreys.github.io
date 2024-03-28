@@ -1,6 +1,61 @@
 ---
 layout: default
 ---
+<h1>Exam Boards</h1>
+
+{% assign specifications = site.data.documents.docs.specifications %}
+
+<h2>A Level</h2>
+
+{% for doc in specifications %}
+<div class="card-box">
+    {% for entry in doc.spec %}
+    {% if doc.level == "A Level" %}
+    <div class="card">
+        <img src="{{entry.image}}">
+        <div class="card__details">
+
+            <!-- A div with name class for the name of the card -->
+            <div class="name">{{ entry.board}}</div>
+
+            <!-- <p>{{ card.description }}</p> -->
+
+            <div class="button-container">
+                <a href="{{ entry.url }}"><button>Read more</button></a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endfor %}
+
+<h2>GCSE</h2>
+
+
+
+{% for doc in specifications %}
+<div class="card-box">
+    {% for entry in doc.spec %}
+    {% if doc.level == "GCSE" %}
+    <div class="card">
+        <img src="{{entry.image}}">
+        <div class="card__details">
+
+            <!-- A div with name class for the name of the card -->
+            <div class="name">{{ entry.board}}</div>
+
+            <!-- <p>{{ card.description }}</p> -->
+
+            <div class="button-container">
+                <a href="{{ entry.url }}"><button>Read more</button></a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endfor %}
 
 <h2>{{ site.data.documents.docs.specs_list_title}}</h2>
 
